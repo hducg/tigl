@@ -31,6 +31,14 @@ namespace generated
     // CPACSTransformation2D
 
     // generated from /xsd:schema/xsd:complexType[724]
+    /// <summary>
+    /// <para>
+    /// pointZType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Point type, containing a z data.</para>
+    /// </remarks>
     class CPACSPointZ
     {
     public:
@@ -53,6 +61,8 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string m_uID;
+
+        /// Z-Component
         double      m_z;
 
     private:

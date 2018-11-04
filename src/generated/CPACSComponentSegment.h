@@ -37,6 +37,75 @@ namespace generated
     // CPACSComponentSegments
 
     // generated from /xsd:schema/xsd:complexType[142]
+    /// <summary>
+    /// <para>
+    /// ComponentSegment of the wing.</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// Within componentSegments the wing structure, the
+    /// control surfaces, the wing fuel tanks and the
+    /// wingFuselageAttachment is defined by using relative coordinates.</para>
+    /// <para>
+    /// A componentSegment is defined in the same way as
+    /// segments: from one cross section (sections-&gt;elements) to
+    /// another. Compared to segments one componentSegment can can start
+    /// and end at elements that are not consecutive. Therefore that one
+    /// componentSegment can be the combination of several segments.
+    /// Each wing has at least one componentSegment (from root to tip).
+    /// The maximal number of componentSegments equals the number of
+    /// segments (each segment is defined as one componentSegment).
+    /// This also implies that each segment can only be part of one componentSegment.</para>
+    /// <para>
+    /// In principal a componentSegment can combine any number
+    /// of segments. But if in one section two elements are defined, the
+    /// componentSegment has to start/end there as no well-defined
+    /// relative coordinats can be defined if steps in the wing occure.</para>
+    /// <para>
+    /// An example for wing componentSegments can be found in
+    /// the picture below:</para>
+    /// <mediaLink>
+    /// <image href="wingcomponentsegments">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// Within componentSegments a relative spanwise
+    /// coordinate (eta) and a relative chordwise coordinate (xsi) is
+    /// defined. Those coordinates are used for the definition of e.g.
+    /// wing structures and control surfaces. there are two types of eta xsi coordinates.
+    /// Segment (eta, xsi) coordinates define the relative local coordinate system for a segment ranging from (0,0) to (1,1).</para>
+    /// <mediaLink>
+    /// <image href="componentsegments_1">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// The eta xsi coordinates for a component segment are based on the segment eta xsi planes.
+    /// As a reference length for the component segment eta coordinate the
+    /// mid chord lines of all the segments are used.
+    /// The beginning of this line at from-element equals eta = 0, while the end of this line
+    /// at the to-element equals eta = 1. All wing positions that lie on the same
+    /// element (segment border) have the same eta coordinate. The points inbetween
+    /// two elements are defined by the iso xsi lines of the segment eta xsi space.
+    /// An example for the definition of the relative axes can
+    /// be found in the picture below:</para>
+    /// <mediaLink>
+    /// <image href="componentsegments_2">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// In order to calculate the global coordinates of a component segment eta xsi point
+    /// one first has to calculate the eta point on the xsi iso line of (xsi=0.5),
+    /// and then walk along the iso eta lineof the segment.</para>
+    /// <para>
+    /// An example for determining the a component
+    /// eta xsi point can be found in the picture below:</para>
+    /// <mediaLink>
+    /// <image href="componentsegments_3">
+    /// </image>
+    /// </mediaLink>
+    /// </content>
+    /// </remarks>
     class CPACSComponentSegment
     {
     public:
@@ -87,11 +156,23 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                            m_uID;
+
+        /// Name of the wing componentSegment.
         std::string                            m_name;
+
+        /// Description of the componentSegment.
         boost::optional<std::string>           m_description;
+
+        /// Reference to the element from which the
+        /// componentSegment shall start.
         std::string                            m_fromElementUID;
+
+        /// Reference to the element from which the
+        /// componentSegment shall end.
         std::string                            m_toElementUID;
+
         boost::optional<CCPACSWingCSStructure> m_structure;
+
         boost::optional<CCPACSControlSurfaces> m_controlSurfaces;
 
     private:

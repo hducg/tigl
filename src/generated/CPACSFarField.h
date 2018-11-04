@@ -30,6 +30,14 @@ namespace generated
     // CPACSCFDTool
 
     // generated from /xsd:schema/xsd:complexType[325]
+    /// <summary>
+    /// <para>
+    /// farFieldType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// </para>
+    /// </remarks>
     class CPACSFarField
     {
     public:
@@ -50,7 +58,9 @@ namespace generated
 
     protected:
         TiglFarFieldType m_type;
+
         double           m_referenceLength;
+
         double           m_multiplier;
 
     private:

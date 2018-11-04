@@ -34,6 +34,14 @@ namespace generated
     // CPACSStructuralProfile3D
 
     // generated from /xsd:schema/xsd:complexType[709]
+    /// <summary>
+    /// <para>
+    /// pointListType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// PointList type, containing an ordered list of points</para>
+    /// </remarks>
     class CPACSPointList
     {
     public:
@@ -55,6 +63,7 @@ namespace generated
     protected:
         CTiglUIDManager* m_uidMgr;
 
+        /// Data point
         std::vector<unique_ptr<CCPACSPoint> > m_points;
 
     private:

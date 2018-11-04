@@ -37,6 +37,14 @@ namespace generated
     // CPACSComposites
 
     // generated from /xsd:schema/xsd:complexType[145]
+    /// <summary>
+    /// <para>
+    /// compositeType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Composite type, conatining data of a composite</para>
+    /// </remarks>
     class CPACSComposite
     {
     public:
@@ -71,9 +79,17 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                                   m_uID;
+
+        /// Name of composite
         std::string                                   m_name;
+
+        /// Description of composite
         boost::optional<std::string>                  m_description;
+
+        /// offset of the laminate. The reference plane of
+        /// the laminate is the arithmetic mean of the laminate thickness.
         boost::optional<double>                       m_offset;
+
         std::vector<unique_ptr<CPACSCompositeLayer> > m_compositeLayers;
 
     private:

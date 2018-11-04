@@ -37,6 +37,15 @@ namespace generated
     // CPACSControlSurfaceTrackType
 
     // generated from /xsd:schema/xsd:complexType[871]
+    /// <summary>
+    /// <para>
+    /// wingSparsType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Spars type, a spar is defined by sparSegments that
+    /// stretch between multiple sparPositions</para>
+    /// </remarks>
     class CPACSTrackStructure
     {
     public:
@@ -114,15 +123,25 @@ namespace generated
 
     protected:
         boost::optional<CCPACSMaterialDefinition> m_controlSurfaceAttachment;
+
         boost::optional<CPACSTrackCar>            m_car;
+
         boost::optional<CPACSTrackStrut1>         m_strut1;
+
         boost::optional<CPACSTrackStrut2>         m_strut2;
+
         boost::optional<CCPACSMaterialDefinition> m_strut3;
+
         boost::optional<CCPACSMaterialDefinition> m_sidePanels;
+
         boost::optional<CCPACSMaterialDefinition> m_upperPanel;
+
         boost::optional<CCPACSMaterialDefinition> m_lowerPanel;
+
         boost::optional<CCPACSMaterialDefinition> m_rollerTrack;
+
         boost::optional<CCPACSMaterialDefinition> m_ribs;
+
         boost::optional<CPACSTrackFairing>        m_fairing;
 
     private:

@@ -39,6 +39,14 @@ namespace generated
     // CPACSVehicles
 
     // generated from /xsd:schema/xsd:complexType[736]
+    /// <summary>
+    /// <para>
+    /// profilesType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Profiles type, containing profile geometries</para>
+    /// </remarks>
     class CPACSProfiles
     {
     public:
@@ -85,9 +93,13 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         boost::optional<CCPACSFuselageProfiles>   m_fuselageProfiles;
+
         boost::optional<CCPACSWingProfiles>       m_wingAirfoils;
+
         boost::optional<CCPACSGuideCurveProfiles> m_guideCurves;
+
         boost::optional<CCPACSRotorProfiles>      m_rotorAirfoils;
+
         boost::optional<CCPACSStructuralProfiles> m_structuralProfiles;
 
     private:

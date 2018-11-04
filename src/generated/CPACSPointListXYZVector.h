@@ -30,6 +30,20 @@ namespace generated
     // CPACSProfileGeometry
 
     // generated from /xsd:schema/xsd:complexType[711]
+    /// <summary>
+    /// <para>
+    /// List of 3D points, kept in three coordinate vecors (x,
+    /// y, z)</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// This set of vectors contains an ordered list of points
+    /// for x, y and z coordinates in the form of stringBased Vectors.
+    /// The x, y and z vector elements with the same index specify a 3D
+    /// point.</para>
+    /// </content>
+    /// </remarks>
     class CPACSPointListXYZVector
     {
     public:
@@ -49,8 +63,13 @@ namespace generated
         TIGL_EXPORT virtual CCPACSStringVector& GetZ();
 
     protected:
+        /// Vector of x coordinates
         CCPACSStringVector m_x;
+
+        /// Vector of y coordinates
         CCPACSStringVector m_y;
+
+        /// Vector of z coordinates
         CCPACSStringVector m_z;
 
     private:

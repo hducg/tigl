@@ -35,6 +35,48 @@ namespace generated
     // CPACSRotorcraftModel
 
     // generated from /xsd:schema/xsd:complexType[767]
+    /// <summary>
+    /// <para>
+    /// rotorBladesType</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// RotorBlades type, containing all the rotor blade
+    /// gometry definitions of an rotorcraft model.</para>
+    /// <para>
+    /// Rotor blade geometries are defined using the same data
+    /// structure as wings (wingType). But in order to be compatible
+    /// with the other rotor blade related types (e.g. rotorType,
+    /// rotorHubType, rotorHubHingeType) there are some additional
+    /// conventions/requirements regarding the definition and
+    /// orientation of rotorBlade geometries:</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// Rotor blades should be positioned relative to the
+    /// global z-axis the way they will be positioned to the rotor
+    /// shaft (when blade azimuth=0deg).</listItem>
+    /// <listItem>
+    /// The global x-axis should be used as radial axis
+    /// (usually the quarter chord line of the rotor blade coincides to
+    /// a great extent with the x-axis of the rotor blade coordinate
+    /// system).</listItem>
+    /// <listItem>
+    /// All sections should be positioned in the positive
+    /// x halfspace.</listItem>
+    /// <listItem>
+    /// Segments should connect sections with ascending x
+    /// coordinates.</listItem>
+    /// <listItem>
+    /// Airfoils defined in the rotorAirfoils node should
+    /// be used instead airfoils from the wingAirfoils node.</listItem>
+    /// </list>
+    /// <mediaLink>
+    /// <image href="rotorBlade_cs01">
+    /// </image>
+    /// </mediaLink>
+    /// </content>
+    /// </remarks>
     class CPACSRotorBlades
     {
     public:
@@ -63,6 +105,12 @@ namespace generated
 
         CTiglUIDManager* m_uidMgr;
 
+        /// Rotor blade geometries are defined using the
+        /// same data structure as wings (wingType). But in order to be
+        /// compatible with the other rotor blade related types (e.g.
+        /// rotorType, rotorHubType, rotorHubHingeType) there are some
+        /// additional conventions/requirements regarding the definition and
+        /// orientation of rotorBlade geometries: see remarks.
         std::vector<unique_ptr<CCPACSWing> > m_rotorBlades;
 
     private:

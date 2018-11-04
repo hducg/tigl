@@ -37,6 +37,27 @@ namespace generated
     // CPACSGenericGeometryComponents
 
     // generated from /xsd:schema/xsd:complexType[397]
+    /// <summary>
+    /// <para>
+    /// genericGeometricComponentType</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// In some cases additional geometric components need to
+    /// be linked to a CPACS, but these components are not yet handled by
+    /// CPACS explicitly. For example, a belly fairing and/or external
+    /// tanks.</para>
+    /// <para>
+    /// A generic geometric component may be applied to include
+    /// such a geometry from an external file (preferably STEP) in the
+    /// context of the overall aircraft.</para>
+    /// <mediaLink>
+    /// <image href="geomBlock">
+    /// </image>
+    /// </mediaLink>
+    /// </content>
+    /// </remarks>
     class CPACSGenericGeometricComponent
     {
     public:
@@ -81,11 +102,21 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                       m_uID;
+
         boost::optional<TiglSymmetryAxis> m_symmetry;
+
+        /// Name of genericGeometricComponent
         std::string                       m_name;
+
+        /// Description of genericGeometricComponent
         boost::optional<std::string>      m_description;
+
+        /// UID of part to which the component is mounted
+        /// (if any)
         boost::optional<std::string>      m_parentUID;
+
         CCPACSTransformation              m_transformation;
+
         CPACSLinkToFile                   m_linkToFile;
 
     private:

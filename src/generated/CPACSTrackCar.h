@@ -30,6 +30,14 @@ namespace generated
     // CPACSTrackStructure
 
     // generated from /xsd:schema/xsd:complexType[869]
+    /// <summary>
+    /// <para>
+    /// trackCarType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// </para>
+    /// </remarks>
     class CPACSTrackCar
     {
     public:
@@ -43,6 +51,7 @@ namespace generated
         TIGL_EXPORT virtual CCPACSMaterialDefinition& GetMaterial();
 
     protected:
+        /// Definition of the material properties.
         CCPACSMaterialDefinition m_material;
 
     private:

@@ -35,6 +35,14 @@ namespace generated
     // CPACSStructuralProfile3D
 
     // generated from /xsd:schema/xsd:complexType[798]
+    /// <summary>
+    /// <para>
+    /// sheetList3DType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// </para>
+    /// </remarks>
     class CPACSSheetList3D
     {
     public:

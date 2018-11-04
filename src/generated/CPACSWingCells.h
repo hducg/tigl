@@ -35,6 +35,14 @@ namespace generated
     // CPACSWingShell
 
     // generated from /xsd:schema/xsd:complexType[926]
+    /// <summary>
+    /// <para>
+    /// Cells of the wing.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// WingCells type, containing all the cells of the wing.</para>
+    /// </remarks>
     class CPACSWingCells
     {
     public:

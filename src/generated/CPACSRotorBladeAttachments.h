@@ -35,6 +35,15 @@ namespace generated
     // CPACSRotorHub
 
     // generated from /xsd:schema/xsd:complexType[766]
+    /// <summary>
+    /// <para>
+    /// rotorBladeAttachmentsType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// RotorBladeAttachments type, containing all hinges and
+    /// blade UIDs attached to the current rotor hub.</para>
+    /// </remarks>
     class CPACSRotorBladeAttachments
     {
     public:

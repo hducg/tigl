@@ -35,6 +35,15 @@ namespace generated
     // CPACSWingSection
 
     // generated from /xsd:schema/xsd:complexType[930]
+    /// <summary>
+    /// <para>
+    /// Elements of the wing.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// WingElements type, containing the elements of a wing
+    /// section.</para>
+    /// </remarks>
     class CPACSWingElements
     {
     public:

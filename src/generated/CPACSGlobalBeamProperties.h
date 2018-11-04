@@ -37,6 +37,15 @@ namespace generated
     // CPACSProfileBasedStructuralElement
 
     // generated from /xsd:schema/xsd:complexType[430]
+    /// <summary>
+    /// <para>
+    /// globalBeamPropertiesType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// globalBeamPropertiesType, containing the global beam
+    /// properties such as EA, EI, mass</para>
+    /// </remarks>
     class CPACSGlobalBeamProperties
     {
     public:
@@ -83,12 +92,19 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                         m_uID;
+
         std::string                         m_source;
+
         bool                                m_consistancy;
+
         CPACSBeamCrossSection               m_beamCrossSection;
+
         CCPACSPointXY                       m_beamCOG;
+
         boost::optional<CCPACSPointXY>      m_beamShearCenter;
+
         boost::optional<CPACSBeamStiffness> m_beamStiffness;
+
         boost::optional<double>             m_beamSpecificMass;
 
     private:

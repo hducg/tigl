@@ -35,6 +35,14 @@ namespace generated
     // CPACSStructuralProfiles
 
     // generated from /xsd:schema/xsd:complexType[843]
+    /// <summary>
+    /// <para>
+    /// structuralProfile3DType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// </para>
+    /// </remarks>
     class CPACSStructuralProfile3D
     {
     public:
@@ -66,9 +74,13 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                  m_uID;
+
         std::string                  m_name;
+
         boost::optional<std::string> m_description;
+
         CPACSPointList               m_pointList;
+
         CPACSSheetList3D             m_sheetList3D;
 
     private:

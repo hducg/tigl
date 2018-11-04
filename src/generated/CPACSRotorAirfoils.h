@@ -35,6 +35,15 @@ namespace generated
     // CPACSProfiles
 
     // generated from /xsd:schema/xsd:complexType[764]
+    /// <summary>
+    /// <para>
+    /// rotorAirfoilsType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// RotorAirfoils type, containing rotor airfoil
+    /// geometries. See profileGeometryType for further documentation</para>
+    /// </remarks>
     class CPACSRotorAirfoils
     {
     public:

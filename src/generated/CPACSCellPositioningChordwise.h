@@ -33,6 +33,16 @@ namespace generated
     // CPACSWingCell
 
     // generated from /xsd:schema/xsd:complexType[115]
+    /// <summary>
+    /// <para>
+    /// Chordwise positioning of wing cells.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// CellPositioningChordwise defines the chordwise
+    /// direction of a wing cell either in two xsi (xsi1 at innerBorder
+    /// and xsi2 at outerBorder) coordinates or via a sparUID.</para>
+    /// </remarks>
     class CPACSCellPositioningChordwise
     {
     public:
@@ -61,8 +71,15 @@ namespace generated
     protected:
         CCPACSWingCell* m_parent;
 
+        /// Reference to a spar as chordwise border.
         boost::optional<std::string> m_sparUID_choice1;
+
+        /// Relative chordwise position of the inner
+        /// end.
         boost::optional<double>      m_xsi1_choice2;
+
+        /// Relative chordwise position of the outer
+        /// end.
         boost::optional<double>      m_xsi2_choice2;
 
     private:

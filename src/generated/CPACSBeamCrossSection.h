@@ -31,6 +31,15 @@ namespace generated
     // CPACSGlobalBeamProperties
 
     // generated from /xsd:schema/xsd:complexType[77]
+    /// <summary>
+    /// <para>
+    /// beamCrossSectionType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// beamCrossSectionType, containing the beam geometrical
+    /// properties</para>
+    /// </remarks>
     class CPACSBeamCrossSection
     {
     public:
@@ -65,10 +74,15 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string m_uID;
+
         double      m_area;
+
         double      m_xMin;
+
         double      m_xMax;
+
         double      m_yMin;
+
         double      m_yMax;
 
     private:

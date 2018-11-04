@@ -30,6 +30,14 @@ namespace generated
     // CPACSControlSurfaceWingCutOut
 
     // generated from /xsd:schema/xsd:complexType[242]
+    /// <summary>
+    /// <para>
+    /// cutOutControlPointsType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// </para>
+    /// </remarks>
     class CPACSCutOutControlPoints
     {
     public:
@@ -47,6 +55,7 @@ namespace generated
 
     protected:
         CPACSCutOutControlPoint m_innerBorder;
+
         CPACSCutOutControlPoint m_outerBorder;
 
     private:

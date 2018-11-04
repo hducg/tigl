@@ -31,6 +31,14 @@ namespace generated
     // CPACSControlSurfaceStep
 
     // generated from /xsd:schema/xsd:complexType[721]
+    /// <summary>
+    /// <para>
+    /// pointXZType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Point type, containing an xz data doublet.</para>
+    /// </remarks>
     class CPACSPointXZ
     {
     public:
@@ -56,7 +64,11 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string m_uID;
+
+        /// X-Component
         double      m_x;
+
+        /// Z-Component
         double      m_z;
 
     private:

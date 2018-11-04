@@ -35,6 +35,15 @@ namespace generated
     // CPACSStringersAssembly
 
     // generated from /xsd:schema/xsd:complexType[839]
+    /// <summary>
+    /// <para>
+    /// arbitraryStringerType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// ArbitraryStringer type, containing stringer definition
+    /// (CPACS V1.5+)</para>
+    /// </remarks>
     class CPACSStringer
     {
     public:
@@ -67,6 +76,7 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                                                   m_uID;
+
         std::vector<unique_ptr<CCPACSFuselageStringerFramePosition> > m_stringerPositions;
 
     private:

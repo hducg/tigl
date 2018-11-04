@@ -33,6 +33,15 @@ namespace generated
     // CPACSControlSurfaceOuterShapeTrailingEdge
 
     // generated from /xsd:schema/xsd:complexType[171]
+    /// <summary>
+    /// <para>
+    /// Optional definition of the exact airfoil shape of the
+    /// control surface.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// </para>
+    /// </remarks>
     class CPACSControlSurfaceContours
     {
     public:

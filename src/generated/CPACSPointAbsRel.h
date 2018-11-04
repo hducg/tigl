@@ -34,6 +34,19 @@ namespace generated
     // CPACSTransformation
 
     // generated from /xsd:schema/xsd:complexType[706]
+    /// <summary>
+    /// <para>
+    /// pointAbsRelType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// PointAbsRel type, containing an xyz data triplet. Each
+    /// of the components is optional. The refType attribute defines,
+    /// whether coordinates are absolute in the global ccordinate system
+    /// [absGlobal], absolute in the parent element's local coordinate
+    /// system [absLocal]. If the object does not have a
+    /// parent, only [absGlobal] is permitted.</para>
+    /// </remarks>
     class CPACSPointAbsRel
     {
     public:
@@ -65,9 +78,16 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                            m_uID;
+
         boost::optional<ECPACSTranslationType> m_refType;
+
+        /// X-Component
         boost::optional<double>                m_x;
+
+        /// Y-Component
         boost::optional<double>                m_y;
+
+        /// Z-Component
         boost::optional<double>                m_z;
 
     private:

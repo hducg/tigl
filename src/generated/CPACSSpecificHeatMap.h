@@ -30,6 +30,15 @@ namespace generated
     // CPACSMaterial
 
     // generated from /xsd:schema/xsd:complexType[818]
+    /// <summary>
+    /// <para>
+    /// Specific heat map, containing the specific heat capacity of a material at different temperatures.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// The specific heat of a material can vary with the temperature. The vectors specificHeat and temperature
+    /// must have the same size to be valid. The data should be linearly interpolated.</para>
+    /// </remarks>
     class CPACSSpecificHeatMap
     {
     public:
@@ -46,7 +55,10 @@ namespace generated
         TIGL_EXPORT virtual CCPACSStringVector& GetSpecificHeat();
 
     protected:
+        /// temperature in [K]
         CCPACSStringVector m_temperature;
+
+        /// specific heat capacity of the material in [J/(kg*K)]
         CCPACSStringVector m_specificHeat;
 
     private:

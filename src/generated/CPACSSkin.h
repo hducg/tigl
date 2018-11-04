@@ -36,6 +36,14 @@ namespace generated
     // CPACSFuselageStructure
 
     // generated from /xsd:schema/xsd:complexType[809]
+    /// <summary>
+    /// <para>
+    /// skinType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Containing data defining the skin</para>
+    /// </remarks>
     class CPACSSkin
     {
     public:
@@ -67,7 +75,10 @@ namespace generated
 
         CTiglUIDManager* m_uidMgr;
 
+        /// Default UID of sheetBasedStructuralElement
+        /// used for the fuselage skin not covered by individual panels
         boost::optional<std::string>       m_standardSheetElementUID;
+
         boost::optional<CPACSSkinSegments> m_skinSegments;
 
     private:

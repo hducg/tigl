@@ -35,6 +35,15 @@ namespace generated
     // CPACSFuselageStructure
 
     // generated from /xsd:schema/xsd:complexType[518]
+    /// <summary>
+    /// <para>
+    /// longFloorBeamsAssemblyType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// longFloorBeamsAssembly type, containing long. floor
+    /// beam assemblys</para>
+    /// </remarks>
     class CPACSLongFloorBeamsAssembly
     {
     public:

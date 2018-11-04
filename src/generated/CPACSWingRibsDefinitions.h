@@ -35,6 +35,15 @@ namespace generated
     // CPACSWingComponentSegmentStructure
 
     // generated from /xsd:schema/xsd:complexType[948]
+    /// <summary>
+    /// <para>
+    /// Ribs of the wing.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// RibDefinitions type, containing the definition of all
+    /// ribs of the wing.</para>
+    /// </remarks>
     class CPACSWingRibsDefinitions
     {
     public:

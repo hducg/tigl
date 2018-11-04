@@ -31,6 +31,14 @@ namespace generated
     // CPACSGuideCurve
 
     // generated from /xsd:schema/xsd:complexType[720]
+    /// <summary>
+    /// <para>
+    /// pointXYZType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Point type, containing an xyz data triplet.</para>
+    /// </remarks>
     class CPACSPointXYZ
     {
     public:
@@ -59,8 +67,14 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string m_uID;
+
+        /// X-Component
         double      m_x;
+
+        /// Y-Component
         double      m_y;
+
+        /// Z-Component
         double      m_z;
 
     private:

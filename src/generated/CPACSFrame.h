@@ -35,6 +35,14 @@ namespace generated
     // CPACSFramesAssembly
 
     // generated from /xsd:schema/xsd:complexType[361]
+    /// <summary>
+    /// <para>
+    /// frameType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// frame type, containing frame definition (V1.5+)</para>
+    /// </remarks>
     class CPACSFrame
     {
     public:
@@ -67,6 +75,7 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                                                   m_uID;
+
         std::vector<unique_ptr<CCPACSFuselageStringerFramePosition> > m_framePositions;
 
     private:

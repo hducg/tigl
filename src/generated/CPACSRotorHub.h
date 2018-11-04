@@ -36,6 +36,15 @@ namespace generated
     // CPACSRotor
 
     // generated from /xsd:schema/xsd:complexType[770]
+    /// <summary>
+    /// <para>
+    /// rotorHubType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// RotorHub type, containing definitions for the rotor hub
+    /// and attached hinges and blades.</para>
+    /// </remarks>
     class CPACSRotorHub
     {
     public:
@@ -74,9 +83,20 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                       m_uID;
+
+        /// Name of the rotor hub.
         boost::optional<std::string>      m_name;
+
+        /// Description of the rotor hub.
         boost::optional<std::string>      m_description;
+
+        /// Rotor head type. Possible values: "semiRigid",
+        /// "rigid", "articulated", "hingeless"
         boost::optional<TiglRotorHubType> m_type;
+
+        /// Rotor blade attachments are used to define how
+        /// many rotor blades are attached at which azimuth positions of the
+        /// rotor hub and the used hinges.
         CCPACSRotorBladeAttachments       m_rotorBladeAttachments;
 
     private:

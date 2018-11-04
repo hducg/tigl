@@ -35,6 +35,45 @@ namespace generated
     // CPACSGuideCurveProfiles
 
     // generated from /xsd:schema/xsd:complexType[433]
+    /// <summary>
+    /// <para>
+    /// guideCurveProfileGeometryType</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// A guide curve profile is defined by a profile name, an
+    /// optional description and a 3-dimensional relative pointlist with
+    /// all three coordinates mandatory. For typical profiles, one of
+    /// the coordinate vectors contains only "0" entries. All point
+    /// coordinates are transferred to the global coordinate system.
+    /// First and last point may, but need not to, be identical.</para>
+    /// <para>
+    /// The points have to be ordered in a mathematical
+    /// positive sense.</para>
+    /// <para>
+    /// A profile can be symmetric. In that case the profile
+    /// is interpreted as being not closed and will be closed by
+    /// mirroring it on the symmetry plane.</para>
+    /// <para>
+    /// Curves have to go continuously over the whole wing or
+    /// fuselage</para>
+    /// <para>
+    /// Connection of guide curves from segment to segment</para>
+    /// <mediaLink>
+    /// <image href="guideProfileWing">
+    /// </image>
+    /// </mediaLink>
+    /// <mediaLink>
+    /// <image href="guideProfileFuselage">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// Please note, currently it is not possible to apply any
+    /// means of class based transformation in the description. However,
+    /// this may be an addition for the future.</para>
+    /// </content>
+    /// </remarks>
     class CPACSGuideCurveProfileGeometry
     {
     public:
@@ -66,9 +105,15 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         boost::optional<TiglSymmetryAxis> m_symmetry;
+
         std::string                       m_uID;
+
+        /// Name of profile
         std::string                       m_name;
+
+        /// Description of profile
         boost::optional<std::string>      m_description;
+
         CCPACSPointListRelXYZ             m_pointList;
 
     private:

@@ -38,6 +38,34 @@ namespace generated
     // CPACSSpecificHeatMap
 
     // generated from /xsd:schema/xsd:complexType[837]
+    /// <summary>
+    /// <para>
+    /// stringVectorBaseType</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// Base type for string vector nodes (including maptype
+    /// vector attribute)</para>
+    /// <para>
+    /// The vector base type can include optional uncertainty
+    /// information. The description of uncertainties is placed in
+    /// addtional attributes. First, it is described by an attribute that
+    /// describes the type of uncertainty function called functionName.
+    /// The functionName attribute includes the tag name of the
+    /// distribution function which is listened in the table shown below.
+    /// Each uncertainty function is further describes by a set of
+    /// parameters that are described in the table below.</para>
+    /// <para>
+    /// If the uncertainty values change for the elements of
+    /// the vector than the attribute may be written as a list of values
+    /// separated by semicolons</para>
+    /// <mediaLink>
+    /// <image href="uncertaintyFunctions">
+    /// </image>
+    /// </mediaLink>
+    /// </content>
+    /// </remarks>
     class CPACSStringVectorBase
     {
     public:
@@ -76,13 +104,21 @@ namespace generated
 
     protected:
         std::string                  m_mapType;
+
         boost::optional<std::string> m_mu;
+
         boost::optional<std::string> m_delta;
+
         boost::optional<std::string> m_a;
+
         boost::optional<std::string> m_b;
+
         boost::optional<std::string> m_c;
+
         boost::optional<std::string> m_v;
+
         boost::optional<std::string> m_w;
+
         std::string                  m_simpleContent;
 
     private:

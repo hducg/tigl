@@ -34,6 +34,14 @@ namespace generated
     // CPACSSheetList3D
 
     // generated from /xsd:schema/xsd:complexType[795]
+    /// <summary>
+    /// <para>
+    /// sheet3DType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// </para>
+    /// </remarks>
     class CPACSSheet3D
     {
     public:
@@ -62,8 +70,11 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                  m_uID;
+
         std::string                  m_name;
+
         boost::optional<std::string> m_description;
+
         CPACSSheetPoints             m_sheetPoints;
 
     private:

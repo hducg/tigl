@@ -36,6 +36,16 @@ namespace generated
     // CPACSComponentSegment
 
     // generated from /xsd:schema/xsd:complexType[192]
+    /// <summary>
+    /// <para>
+    /// controlSurfacesType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Definition of the outer shape, structure and deflection
+    /// of all control surfaces (flaps, slats, soiler, ailerons...) of
+    /// the wing.</para>
+    /// </remarks>
     class CPACSControlSurfaces
     {
     public:

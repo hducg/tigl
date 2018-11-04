@@ -43,6 +43,15 @@ namespace generated
     // CPACSFuselage
 
     // generated from /xsd:schema/xsd:complexType[383]
+    /// <summary>
+    /// <para>
+    /// fuselageStructureType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// FuselageStructure type, containing data of the fuselage's
+    /// structure</para>
+    /// </remarks>
     class CPACSFuselageStructure
     {
     public:
@@ -114,12 +123,19 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         boost::optional<CPACSSkin>                          m_skin;
+
         boost::optional<CCPACSStringersAssembly>            m_stringers;
+
         boost::optional<CCPACSFramesAssembly>               m_frames;
+
         boost::optional<CCPACSCargoCrossBeamsAssembly>      m_cargoCrossBeams;
+
         boost::optional<CCPACSCargoCrossBeamStrutsAssembly> m_cargoCrossBeamStruts;
+
         boost::optional<CCPACSLongFloorBeamsAssembly>       m_longFloorBeams;
+
         boost::optional<CCPACSPressureBulkheadAssembly>     m_pressureBulkheads;
+
         boost::optional<CPACSCargoDoorsAssembly>            m_cargoDoors;
 
     private:

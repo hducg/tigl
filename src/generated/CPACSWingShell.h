@@ -37,6 +37,23 @@ namespace generated
     // CPACSWingComponentSegmentStructure
 
     // generated from /xsd:schema/xsd:complexType[957]
+    /// <summary>
+    /// <para>
+    /// Shells of the wing.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Within the wingShellType the upper and lower skin of a
+    /// and the skin stringers are defined. At 'skin' and 'stringer' the
+    /// skin and stringer properties of the complete componentSegment are
+    /// defined. If different skin or stringer properties should be
+    /// defined in a special region of the wing this can be done within
+    /// 'cells'.</para>
+    /// <para>
+    /// If the stringer should not be defined explicite, they
+    /// can be defined implizite by defining an equivalent material layer
+    /// and using a composite as material.</para>
+    /// </remarks>
     class CPACSWingShell
     {
     public:
@@ -72,7 +89,9 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                      m_uID;
+
         CPACSWingSkin                    m_skin;
+
         boost::optional<CCPACSWingCells> m_cells;
 
     private:

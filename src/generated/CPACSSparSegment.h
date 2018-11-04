@@ -36,6 +36,16 @@ namespace generated
     // CPACSSparSegments
 
     // generated from /xsd:schema/xsd:complexType[816]
+    /// <summary>
+    /// <para>
+    /// SparSegments (=spars) of the wing.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// SparSegmentType, each spar is defined by multiple
+    /// sparPositions that are referenced via their uID. The spar cross
+    /// section is defined in 'sparCrossSection'.</para>
+    /// </remarks>
     class CPACSSparSegment
     {
     public:
@@ -74,9 +84,15 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         boost::optional<std::string> m_uID;
+
+        /// Name of the spar segment (=spar).
         std::string                  m_name;
+
+        /// Description of the spar segment (spar).
         std::string                  m_description;
+
         CCPACSWingSparPositionUIDs   m_sparPositionUIDs;
+
         CPACSSparCrossSection        m_sparCrossSection;
 
     private:

@@ -29,6 +29,26 @@ namespace generated
     // CPACSControlSurfaceBorderTrailingEdge
 
     // generated from /xsd:schema/xsd:complexType[153]
+    /// <summary>
+    /// <para>
+    /// Airfoil definition of an control surface at the
+    /// inner/outer border.</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// Optional definition of the exact airfoil shape at the
+    /// inner/outer border of the control surface.</para>
+    /// <para>
+    /// The airfoil shape is defined via referencing to the
+    /// airfoilUID. As the leading and trailing edge point is fix due to
+    /// the outer shape definition of the control surface the airfoil
+    /// can only be rotated around the x-axis (axis going from leading
+    /// to trailing edge of the inner/outer border of the control
+    /// surface). Scaling in x-direction is also defined by the outer
+    /// shape, wherefore only scaling in y and z direction is allowed.</para>
+    /// </content>
+    /// </remarks>
     class CPACSContourReference
     {
     public:
@@ -51,9 +71,20 @@ namespace generated
         TIGL_EXPORT virtual void SetScalZ(const double& value);
 
     protected:
+        /// Reference to the airfoil uID.
         std::string m_airfoilUID;
+
+        /// Rotation around an axis, going from the
+        /// leading edge point to the trailing edge point of the inner/outer
+        /// border of the control surface. Defaults to 90°, which is
+        /// equivalent to perpendicular on the control surface middle plane.
         double      m_rotX;
+
+        /// Scaling of the airfoil in spanwise direction
+        /// (not used for 2D airfoils).
         double      m_scalY;
+
+        /// Scaling in thickness direction of the airfoil.
         double      m_scalZ;
 
     private:

@@ -34,6 +34,22 @@ namespace generated
     // CPACSVehicles
 
     // generated from /xsd:schema/xsd:complexType[780]
+    /// <summary>
+    /// <para>
+    /// rotorcraftType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Rotorcraft type, containing all the rotorcraft models.</para>
+    /// <para>
+    /// Most of the extensions used in the rotorcraft type have
+    /// been defined as part of the work in the DLR project RIDE
+    /// (Rotorcraft Integrated Design and Evaluation, 2009-2012).
+    /// Therefore some of the definitions and conventions are tightly
+    /// coupled to the RIDE toolchain and tools. Further generalization
+    /// and assimilation of these parts to the definitions for fixed-wing
+    /// aircraft is planned for the near future.</para>
+    /// </remarks>
     class CPACSRotorcraft
     {
     public:

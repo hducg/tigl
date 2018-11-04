@@ -35,6 +35,14 @@ namespace generated
     // CPACSStructuralElements
 
     // generated from /xsd:schema/xsd:complexType[922]
+    /// <summary>
+    /// <para>
+    /// windowsType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Windows type, containing windows</para>
+    /// </remarks>
     class CPACSWindows
     {
     public:
@@ -60,6 +68,7 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                           m_uID;
+
         std::vector<unique_ptr<CPACSCutOut> > m_windows;
 
     private:

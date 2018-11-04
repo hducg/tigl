@@ -34,6 +34,14 @@ namespace generated
     // CPACSVehicles
 
     // generated from /xsd:schema/xsd:complexType[54]
+    /// <summary>
+    /// <para>
+    /// aircraftType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Aircraft type, containing all the aircraft models</para>
+    /// </remarks>
     class CPACSAircraft
     {
     public:

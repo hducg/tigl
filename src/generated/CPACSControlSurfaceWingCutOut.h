@@ -38,6 +38,31 @@ namespace generated
     // CPACSTrailingEdgeDevice
 
     // generated from /xsd:schema/xsd:complexType[191]
+    /// <summary>
+    /// <para>
+    /// Cut out of the parents structure due to a control
+    /// surface.</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// Optional. Definition of the parents structure cut out
+    /// due to a control surface. The cut out is split into three parts:
+    /// cut out of the upper and lower skin and the definition of an
+    /// profile conecting the cut out of the upper and lower skin.</para>
+    /// <para>
+    /// An example for wing cut outs can be found in the
+    /// picture below:</para>
+    /// <mediaLink>
+    /// <image href="wingCutOut">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// In the default configuration the cut out is as wide as
+    /// the control surface. If additional spacing is necessary inner
+    /// and outer border may be set.</para>
+    /// </content>
+    /// </remarks>
     class CPACSControlSurfaceWingCutOut
     {
     public:
@@ -86,10 +111,15 @@ namespace generated
         CCPACSTrailingEdgeDevice* m_parent;
 
         CCPACSControlSurfaceSkinCutout                        m_upperSkin;
+
         CCPACSControlSurfaceSkinCutout                        m_lowerSkin;
+
         boost::optional<CPACSCutOutControlPoints>             m_cutOutProfileControlPoint;
+
         boost::optional<CPACSCutOutProfiles>                  m_cutOutProfiles;
+
         boost::optional<CCPACSControlSurfaceSkinCutOutBorder> m_innerBorder;
+
         boost::optional<CCPACSControlSurfaceSkinCutOutBorder> m_outerBorder;
 
     private:

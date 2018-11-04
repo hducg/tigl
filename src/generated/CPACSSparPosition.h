@@ -34,6 +34,30 @@ namespace generated
     // CPACSSparPositions
 
     // generated from /xsd:schema/xsd:complexType[813]
+    /// <summary>
+    /// <para>
+    /// Spar position on the wing</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// sparPositionType, a sparPostion defines a location
+    /// within the componentSegment where a spar in mounted. Eta and xsi
+    /// are relative to the componentSegment.</para>
+    /// <para>
+    /// Please find below a picture for an example definition
+    /// of 3 spars in one wing, by using spar position points and spar
+    /// segments:</para>
+    /// <mediaLink>
+    /// <image width="500" href="spars1">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// As an alternative to the relative eta coordinate it is
+    /// possible to specify an elementUID so that the spar position is
+    /// relative to the outer geometry, e.g. kink, of the wing.</para>
+    /// </content>
+    /// </remarks>
     class CPACSSparPosition
     {
     public:
@@ -71,8 +95,14 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         boost::optional<std::string> m_uID;
+
+        /// Xsi coordinate of the spar definition point.
         double                       m_xsi;
+
+        /// Eta coordinate of the spar definition point.
         boost::optional<double>      m_eta_choice1;
+
+        /// Link to a section element.
         boost::optional<std::string> m_elementUID_choice2;
 
     private:

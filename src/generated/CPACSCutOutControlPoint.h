@@ -29,6 +29,24 @@ namespace generated
     // CPACSCutOutControlPoints
 
     // generated from /xsd:schema/xsd:complexType[241]
+    /// <summary>
+    /// <para>
+    /// Additional definition of the leading edge cut out.</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// Optional. Definition of additional parameters,
+    /// describing the shape of the parents leading edge of the cut out
+    /// due to leading edge devices.</para>
+    /// <para>
+    /// The parameters are described in the picture below:</para>
+    /// <mediaLink>
+    /// <image href="led_cutout">
+    /// </image>
+    /// </mediaLink>
+    /// </content>
+    /// </remarks>
     class CPACSCutOutControlPoint
     {
     public:
@@ -45,7 +63,14 @@ namespace generated
         TIGL_EXPORT virtual void SetXsi(const double& value);
 
     protected:
+        /// Relative height of the most forward position of
+        /// the parents leading edge, relative to the airfoil height without
+        /// cut out.
         double m_relHeight;
+
+        /// Relative chordwise position of the most
+        /// forward position of the parents leading edge, relative to the
+        /// parents chord without cut out.
         double m_xsi;
 
     private:

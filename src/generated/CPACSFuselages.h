@@ -39,6 +39,15 @@ namespace generated
     // CPACSRotorcraftModel
 
     // generated from /xsd:schema/xsd:complexType[387]
+    /// <summary>
+    /// <para>
+    /// fuselagesType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Fuselages type, containing the fuselages of the
+    /// configuration</para>
+    /// </remarks>
     class CPACSFuselages
     {
     public:

@@ -32,6 +32,18 @@ namespace generated
     // CPACSGenericGeometricComponent
 
     // generated from /xsd:schema/xsd:complexType[497]
+    /// <summary>
+    /// <para>
+    /// linkToFile</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Please provide a link to the additional file that shall
+    /// be loaded by the TIGL library. Furthermore it is necessary to
+    /// provide the format attribute so that the file type can be
+    /// identified. Several CAD formats provide multiple endings, and
+    /// hence, this measure seems necessary.</para>
+    /// </remarks>
     class CPACSLinkToFile
     {
     public:
@@ -49,6 +61,7 @@ namespace generated
 
     protected:
         std::string                                 m_base;
+
         boost::optional<CPACSLinkToFileType_format> m_format;
 
     private:

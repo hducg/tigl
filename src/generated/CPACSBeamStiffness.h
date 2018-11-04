@@ -31,6 +31,15 @@ namespace generated
     // CPACSGlobalBeamProperties
 
     // generated from /xsd:schema/xsd:complexType[78]
+    /// <summary>
+    /// <para>
+    /// beamStiffnessType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// globalBeamStiffnessType, containing the beam
+    /// stiffnesses such as EA, EI</para>
+    /// </remarks>
     class CPACSBeamStiffness
     {
     public:
@@ -71,12 +80,19 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string m_uID;
+
         double      m_EA;
+
         double      m_EIxx;
+
         double      m_EIyy;
+
         double      m_EIxy;
+
         double      m_GIt;
+
         double      m_G;
+
         double      m_It;
 
     private:

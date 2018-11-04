@@ -35,6 +35,15 @@ namespace generated
     // CPACSRotorcraftModel
 
     // generated from /xsd:schema/xsd:complexType[781]
+    /// <summary>
+    /// <para>
+    /// rotorsType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Rotors type, containing all the rotors (mainRotors,
+    /// tailRotors, fenestrons, propellers, ...) of an rotorcraft model.</para>
+    /// </remarks>
     class CPACSRotors
     {
     public:

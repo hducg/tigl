@@ -36,6 +36,16 @@ namespace generated
     // CPACSStructuralProfile
 
     // generated from /xsd:schema/xsd:complexType[799]
+    /// <summary>
+    /// <para>
+    /// List of sheets, connecting 2-dimensional profile
+    /// points.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// SheetList type, containing a list of sheets. Each sheet
+    /// combines two points to one sheet.</para>
+    /// </remarks>
     class CPACSSheetList
     {
     public:

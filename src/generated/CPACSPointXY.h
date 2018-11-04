@@ -36,6 +36,14 @@ namespace generated
     // CPACSTransformation2D
 
     // generated from /xsd:schema/xsd:complexType[719]
+    /// <summary>
+    /// <para>
+    /// Data points in x-y-space.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Point type, containing an xy data doublet.</para>
+    /// </remarks>
     class CPACSPointXY
     {
     public:
@@ -61,7 +69,11 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string m_uID;
+
+        /// X-Component
         double      m_x;
+
+        /// Y-Component
         double      m_y;
 
     private:

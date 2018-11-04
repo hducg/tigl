@@ -38,6 +38,20 @@ namespace generated
     // CPACSRotorcraft
 
     // generated from /xsd:schema/xsd:complexType[779]
+    /// <summary>
+    /// <para>
+    /// rotorcraftModelType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// RotorCraftModel type, containing a complete rotorcraft
+    /// model (Geometry and all specific data). The rotorcraftModelType
+    /// is basically a copy of the aircraftModelType with the following
+    /// additional elements: rotors, rotorBlades, driveSystems.
+    /// Furthermore the folowing elements have been adapted for
+    /// rotorcraft: global and analyses (aeroPerformance and
+    /// massBreakdown).</para>
+    /// </remarks>
     class CPACSRotorcraftModel
     {
     public:
@@ -87,11 +101,19 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                        m_uID;
+
+        /// Name of rotorcraft model
         std::string                        m_name;
+
+        /// Description of rotorcraft model
         boost::optional<std::string>       m_description;
+
         boost::optional<CCPACSFuselages>   m_fuselages;
+
         boost::optional<CCPACSWings>       m_wings;
+
         boost::optional<CCPACSRotors>      m_rotors;
+
         boost::optional<CCPACSRotorBlades> m_rotorBlades;
 
     private:

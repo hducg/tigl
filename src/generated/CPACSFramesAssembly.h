@@ -35,6 +35,14 @@ namespace generated
     // CPACSFuselageStructure
 
     // generated from /xsd:schema/xsd:complexType[362]
+    /// <summary>
+    /// <para>
+    /// framesAssemblyType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// FramesAssembly type, containing frames assembly</para>
+    /// </remarks>
     class CPACSFramesAssembly
     {
     public:

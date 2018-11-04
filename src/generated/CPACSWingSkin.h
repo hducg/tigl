@@ -33,6 +33,31 @@ namespace generated
     // CPACSWingShell
 
     // generated from /xsd:schema/xsd:complexType[958]
+    /// <summary>
+    /// <para>
+    /// Material properties of the wing skin.</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// The wingSkinType describes the material properties of
+    /// the wing.</para>
+    /// <para>
+    /// For composites materials: the positive z-direction is
+    /// from the outer side to the inner side.</para>
+    /// <para>
+    /// For composites materials: the reference axis for the
+    /// orthotropyDirection is defined by the two leading edge points of
+    /// the 'from'- and the 'to'-element of the componentSegment
+    /// definition. The angle between the reference axis and the
+    /// orthotropyDirection equals the rotation around the z-reference
+    /// axis. For details, please refer to the picture below:</para>
+    /// <mediaLink>
+    /// <image href="wingskinorthotropydir">
+    /// </image>
+    /// </mediaLink>
+    /// </content>
+    /// </remarks>
     class CPACSWingSkin
     {
     public:
@@ -46,6 +71,7 @@ namespace generated
         TIGL_EXPORT virtual CCPACSMaterialDefinition& GetMaterial();
 
     protected:
+        /// Material properties of the wing skin.
         CCPACSMaterialDefinition m_material;
 
     private:

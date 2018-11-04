@@ -35,6 +35,959 @@ namespace generated
 {
     // This class is used in:
     // generated from /xsd:schema/xsd:complexType[1]
+    /// <summary>
+    /// <para>
+    /// CPACS root element</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <definitionTable>
+    /// <definedTerm>
+    /// Version</definedTerm>
+    /// <definition>
+    /// <para>
+    /// V2.3.1</para>
+    /// </definition>
+    /// <definedTerm>
+    /// Date</definedTerm>
+    /// <definition>
+    /// <para>
+    /// 2016-07-29T16:47:00</para>
+    /// </definition>
+    /// </definitionTable>
+    /// <section>
+    /// <title>
+    /// 1. Overview</title>
+    /// <content>
+    /// <para>
+    /// The ommon arametric ircraft onfiguration cheme  is an XML-based data format for describing aircraft configurations and their corresponding data. This XML-Schema document provides a description of the  data structure that can be used for automatic validation as well as for documentation purposes. In this Schema, type declarations and element definitions are seperated. This means, there is e.g. a pointType class, containing x, y and z components. This class is then used in different places under different names (e.g. the "translation" node in "transformation" is made of pointType, meaning it has x, y and z subnodes.)<legacyBold>
+    /// C</legacyBold>
+    /// The ommon arametric ircraft onfiguration cheme  is an XML-based data format for describing aircraft configurations and their corresponding data. This XML-Schema document provides a description of the  data structure that can be used for automatic validation as well as for documentation purposes. In this Schema, type declarations and element definitions are seperated. This means, there is e.g. a pointType class, containing x, y and z components. This class is then used in different places under different names (e.g. the "translation" node in "transformation" is made of pointType, meaning it has x, y and z subnodes.)<legacyBold>
+    /// P</legacyBold>
+    /// The ommon arametric ircraft onfiguration cheme  is an XML-based data format for describing aircraft configurations and their corresponding data. This XML-Schema document provides a description of the  data structure that can be used for automatic validation as well as for documentation purposes. In this Schema, type declarations and element definitions are seperated. This means, there is e.g. a pointType class, containing x, y and z components. This class is then used in different places under different names (e.g. the "translation" node in "transformation" is made of pointType, meaning it has x, y and z subnodes.)<legacyBold>
+    /// A</legacyBold>
+    /// The ommon arametric ircraft onfiguration cheme  is an XML-based data format for describing aircraft configurations and their corresponding data. This XML-Schema document provides a description of the  data structure that can be used for automatic validation as well as for documentation purposes. In this Schema, type declarations and element definitions are seperated. This means, there is e.g. a pointType class, containing x, y and z components. This class is then used in different places under different names (e.g. the "translation" node in "transformation" is made of pointType, meaning it has x, y and z subnodes.)<legacyBold>
+    /// C</legacyBold>
+    /// The ommon arametric ircraft onfiguration cheme  is an XML-based data format for describing aircraft configurations and their corresponding data. This XML-Schema document provides a description of the  data structure that can be used for automatic validation as well as for documentation purposes. In this Schema, type declarations and element definitions are seperated. This means, there is e.g. a pointType class, containing x, y and z components. This class is then used in different places under different names (e.g. the "translation" node in "transformation" is made of pointType, meaning it has x, y and z subnodes.)<legacyBold>
+    /// S</legacyBold>
+    /// The ommon arametric ircraft onfiguration cheme  is an XML-based data format for describing aircraft configurations and their corresponding data. This XML-Schema document provides a description of the  data structure that can be used for automatic validation as well as for documentation purposes. In this Schema, type declarations and element definitions are seperated. This means, there is e.g. a pointType class, containing x, y and z components. This class is then used in different places under different names (e.g. the "translation" node in "transformation" is made of pointType, meaning it has x, y and z subnodes.)<legacyItalic>
+    /// (CPACS)</legacyItalic>
+    /// The ommon arametric ircraft onfiguration cheme  is an XML-based data format for describing aircraft configurations and their corresponding data. This XML-Schema document provides a description of the  data structure that can be used for automatic validation as well as for documentation purposes. In this Schema, type declarations and element definitions are seperated. This means, there is e.g. a pointType class, containing x, y and z components. This class is then used in different places under different names (e.g. the "translation" node in "transformation" is made of pointType, meaning it has x, y and z subnodes.)<para>
+    /// </para>
+    /// The ommon arametric ircraft onfiguration cheme  is an XML-based data format for describing aircraft configurations and their corresponding data. This XML-Schema document provides a description of the  data structure that can be used for automatic validation as well as for documentation purposes. In this Schema, type declarations and element definitions are seperated. This means, there is e.g. a pointType class, containing x, y and z components. This class is then used in different places under different names (e.g. the "translation" node in "transformation" is made of pointType, meaning it has x, y and z subnodes.)<legacyItalic>
+    /// CPACS</legacyItalic>
+    /// The ommon arametric ircraft onfiguration cheme  is an XML-based data format for describing aircraft configurations and their corresponding data. This XML-Schema document provides a description of the  data structure that can be used for automatic validation as well as for documentation purposes. In this Schema, type declarations and element definitions are seperated. This means, there is e.g. a pointType class, containing x, y and z components. This class is then used in different places under different names (e.g. the "translation" node in "transformation" is made of pointType, meaning it has x, y and z subnodes.)</para>
+    /// <para>
+    /// CPACS is an open source project published by the German Aerospace Center (DLR e.V.). For further information please go to http://software.dlr.de/p/cpacs/home/</para>
+    /// <para>
+    /// You can display the text based version of CPACS in every text editor. Further tools are for example www.eclipse.org</para>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// 2. Coordinate Systems</title>
+    /// <content>
+    /// <para>
+    /// Coordinate systems are a regular cause for ambiguous interpretation of data. In CPACS only the CPACS-coordinate system is valid. The following paragraphs outline the determination to known coordinate systems.</para>
+    /// <para>
+    /// The CPACS coordinate system is the coordinate system identified by TIGL, CPACS's geometric library. It is a right-handed coordinate system. If an aircraft is defined in the CPACS coordinate system it will usually follow the directions listed in the table below.</para>
+    /// <para>
+    /// Therefore, the CPACS coordinate system can be confused with the body-fixed coordinate system. While often the CPACS coordinate system and the body-fixed coordinate system overlap, this must not always be true. Several definitions for body-fixed coordinate systems exist (x-axis through nose and tail, x-axis perpendicular to nose plane). For non-symmetric aircraft, body-fixed coordinate systems become even more complicated. Hence, analysis tools should stick to the CPACS-Coordinate system. It remains to the designer to model the geometry accordingly.</para>
+    /// <para>
+    /// The CPACS coordinate system does not rotate with flow. Hence, aerodynamic calculations do rotate their flow relative to the CPACS-coordinate system. If not stated explicitly different, e.g. for target lift-coefficients, results are returned in the CPACS coordinate system, i.e. the cfx-coefficient is parrallel to the CPACS x-Coordinate, regardless of the way the geometry is defined.</para>
+    /// <para>
+    /// The following table gives an "best-practice" advice on how to locate a geometry within CPACS. Different approaches are, of course, valid as well.</para>
+    /// <table>
+    /// <row>
+    /// <entry>
+    /// <legacyBold>
+    /// Axis</legacyBold>
+    /// </entry>
+    /// <entry>
+    /// <legacyBold>
+    /// Direction</legacyBold>
+    /// </entry>
+    /// <entry>
+    /// <legacyBold>
+    /// Description</legacyBold>
+    /// </entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// x</entry>
+    /// <entry>
+    /// tailwards</entry>
+    /// <entry>
+    /// from nose to tail</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// y</entry>
+    /// <entry>
+    /// spanwise</entry>
+    /// <entry>
+    /// from symmetry plane to the right wingtip</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// z</entry>
+    /// <entry>
+    /// upwards</entry>
+    /// <entry>
+    /// from landing gear to tip of vertical tailplane</entry>
+    /// </row>
+    /// </table>
+    /// <para>
+    /// The following pictures give an example for a geometry that is defined in alignment with the CPACS coordinate system, i.e. the body coordinate system overlaps with the CPACS coordinate system.</para>
+    /// <mediaLink>
+    /// <image href="cosys01">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// The aerodynamic analysis is relative to the CPACS coordinate system. That is, the angle of attack is represented by the dashed orange line. Results of the aerodynamic calculation are given in the CPACS coordinate system.</para>
+    /// <mediaLink>
+    /// <image href="cosys02">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// The following pictures give an example for a geometry that is not defined in alignment with the CPACS coordinate system. It is a valid CPACS file, but chosen here for demonstrative purposes.</para>
+    /// <mediaLink>
+    /// <image href="cosys1">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// The body axes and the CPACS coordinate system do not align. That is, the origin of the geometry is not at CPACS (0,0,0) but at a point in positive x- and z-direction.</para>
+    /// <mediaLink>
+    /// <image href="cosys2">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// Again, the aerodynamic analysis is relative to the CPACS coordinate system. That is, the angle of attack is represented by the dashed orange line. Results of the aerodynamic calculation are given in the CPACS coordinate system.</para>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// 3. Units</title>
+    /// <content>
+    /// <para>
+    /// There are no explicit attributes describing units in CPACS. The general convention is that all values must be given in the following SI-units:</para>
+    /// <table>
+    /// <row>
+    /// <entry>
+    /// [m]</entry>
+    /// <entry>
+    /// Position, Distance</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// [m]<superscript>
+    /// </superscript>
+    /// [m]</entry>
+    /// <entry>
+    /// Area</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// [m]<superscript>
+    /// </superscript>
+    /// [m]</entry>
+    /// <entry>
+    /// Volume</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// [kg]</entry>
+    /// <entry>
+    /// Mass</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// [s]</entry>
+    /// <entry>
+    /// Time</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// [K]</entry>
+    /// <entry>
+    /// Temperature</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// [°]</entry>
+    /// <entry>
+    /// Angle</entry>
+    /// </row>
+    /// </table>
+    /// <para>
+    /// or in derived units, e.g.:</para>
+    /// <table>
+    /// <row>
+    /// <entry>
+    /// [N]</entry>
+    /// <entry>
+    /// Force</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// [Nm]</entry>
+    /// <entry>
+    /// Moment</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// [W]</entry>
+    /// <entry>
+    /// Power</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// [J]</entry>
+    /// <entry>
+    /// Energy</entry>
+    /// </row>
+    /// </table>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// 4. Splitting up a CPACS dataset into several files</title>
+    /// <content>
+    /// <para>
+    /// To provide a better overview, it is possible to split up a  dataset into several files. This can be done by inserting an  node at an arbitrary position into the datatset. This node contains a  node with a URI to the external file(s), followed by one or more  nodes, containing each a name of a file to be included at that position. Below, an example of such external data is given:<legacyItalic>
+    /// CPACS</legacyItalic>
+    /// To provide a better overview, it is possible to split up a  dataset into several files. This can be done by inserting an  node at an arbitrary position into the datatset. This node contains a  node with a URI to the external file(s), followed by one or more  nodes, containing each a name of a file to be included at that position. Below, an example of such external data is given:<legacyBold>
+    /// &lt;externaldata&gt;</legacyBold>
+    /// To provide a better overview, it is possible to split up a  dataset into several files. This can be done by inserting an  node at an arbitrary position into the datatset. This node contains a  node with a URI to the external file(s), followed by one or more  nodes, containing each a name of a file to be included at that position. Below, an example of such external data is given:<legacyBold>
+    /// &lt;path&gt;</legacyBold>
+    /// To provide a better overview, it is possible to split up a  dataset into several files. This can be done by inserting an  node at an arbitrary position into the datatset. This node contains a  node with a URI to the external file(s), followed by one or more  nodes, containing each a name of a file to be included at that position. Below, an example of such external data is given:<legacyBold>
+    /// &lt;filename&gt;</legacyBold>
+    /// To provide a better overview, it is possible to split up a  dataset into several files. This can be done by inserting an  node at an arbitrary position into the datatset. This node contains a  node with a URI to the external file(s), followed by one or more  nodes, containing each a name of a file to be included at that position. Below, an example of such external data is given:</para>
+    /// <code language="XML" title=" ">
+    /// &lt;?xml version="1.0" encoding="utf-8"?&gt;
+    /// &lt;cpacs xsi:noNamespaceSchemaLocation="cpacs_schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+    /// &lt;vehicles&gt;
+    /// &lt;profiles&gt;
+    /// &lt;wingAirfoils&gt;
+    /// &lt;externaldata&gt;
+    /// &lt;path&gt;file:://airfoils&lt;/path&gt;
+    /// &lt;filename&gt;NACA0010.xml&lt;/filename&gt;
+    /// &lt;filename&gt;NACA2412.xml&lt;/filename&gt;
+    /// &lt;/externaldata&gt;
+    /// &lt;airfoil uID="NACA0012"&gt;
+    /// &lt;name&gt;NACA 0012 Airfoil&lt;/name&gt;
+    /// &lt;pointList&gt;...&lt;/pointList&gt;
+    /// &lt;/airfoil&gt;
+    /// &lt;/wingAirfoils&gt;
+    /// &lt;/profiles&gt;
+    /// &lt;/vehicles&gt;
+    /// &lt;cpacs&gt;</code>
+    /// <para>
+    /// Such an external file would look like:</para>
+    /// <code language="XML" title=" ">
+    /// &lt;?xml version="1.0" encoding="utf-8"?&gt;
+    /// &lt;airfoil uID="NACA0010"&gt;
+    /// &lt;name&gt;NACA 0010 Airfoil&lt;/name&gt;
+    /// &lt;pointList&gt;...&lt;/pointList&gt;
+    /// &lt;/airfoil&gt;</code>
+    /// <para>
+    /// The file would be included completely, except for its title line  . This concept can also be used recursively (external files of external files), then it is important to prevent circle connections (file "A" loading file "B" loading file "C" loading again file "A" ...).<legacyItalic>
+    /// &lt;?xml version="1.0" encoding="utf-8"?&gt;</legacyItalic>
+    /// The file would be included completely, except for its title line  . This concept can also be used recursively (external files of external files), then it is important to prevent circle connections (file "A" loading file "B" loading file "C" loading again file "A" ...).</para>
+    /// <para>
+    /// For path URI adresses, the trailing file separator "/" may be omitted. Below, some examples for path URIs are given:</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// Absolute local path: "file:///tmp" or "file:///c:/windows/tmp"</listItem>
+    /// <listItem>
+    /// Relative local direcotry: "file://relativeDirectory" or "file://../anotherRelativeDirectory"</listItem>
+    /// <listItem>
+    /// Remote net ressource: "http://www.someurl.de"</listItem>
+    /// </list>
+    /// <para>
+    /// A  dataset with external files, being loaded by a special library like the VA ML nterface , shall collect all its external datafiles and build up a single tree from them. A validation against this schema is only possible for such a single tree file; the &lt;externaldata&gt;nodes are not recognized by it. To preserve the information, necessary to split the file up into external files again later, externaldata information is maintained within three attributes of the former external top node:<legacyItalic>
+    /// CPACS</legacyItalic>
+    /// A  dataset with external files, being loaded by a special library like the VA ML nterface , shall collect all its external datafiles and build up a single tree from them. A validation against this schema is only possible for such a single tree file; the &lt;externaldata&gt;nodes are not recognized by it. To preserve the information, necessary to split the file up into external files again later, externaldata information is maintained within three attributes of the former external top node:<legacyBold>
+    /// TI</legacyBold>
+    /// A  dataset with external files, being loaded by a special library like the VA ML nterface , shall collect all its external datafiles and build up a single tree from them. A validation against this schema is only possible for such a single tree file; the &lt;externaldata&gt;nodes are not recognized by it. To preserve the information, necessary to split the file up into external files again later, externaldata information is maintained within three attributes of the former external top node:<legacyBold>
+    /// X</legacyBold>
+    /// A  dataset with external files, being loaded by a special library like the VA ML nterface , shall collect all its external datafiles and build up a single tree from them. A validation against this schema is only possible for such a single tree file; the &lt;externaldata&gt;nodes are not recognized by it. To preserve the information, necessary to split the file up into external files again later, externaldata information is maintained within three attributes of the former external top node:<legacyBold>
+    /// I</legacyBold>
+    /// A  dataset with external files, being loaded by a special library like the VA ML nterface , shall collect all its external datafiles and build up a single tree from them. A validation against this schema is only possible for such a single tree file; the &lt;externaldata&gt;nodes are not recognized by it. To preserve the information, necessary to split the file up into external files again later, externaldata information is maintained within three attributes of the former external top node:<legacyItalic>
+    /// TIXI</legacyItalic>
+    /// A  dataset with external files, being loaded by a special library like the VA ML nterface , shall collect all its external datafiles and build up a single tree from them. A validation against this schema is only possible for such a single tree file; the &lt;externaldata&gt;nodes are not recognized by it. To preserve the information, necessary to split the file up into external files again later, externaldata information is maintained within three attributes of the former external top node:</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// externalFileName - Name of the file where the external data shall be saved</listItem>
+    /// <listItem>
+    /// externalDataDirectory - Directory of the external data file. Its content is analogous to the &lt;externaldata&gt;'s &lt;path&gt;node described above.</listItem>
+    /// <listItem>
+    /// externalDataNodePath - XPATH of the node which is replaced with the content of the external file. In case that it is an external file of an external file, then it is the XPATH in the outer external file. If, e.g., in the example above the &lt;pointList&gt;node would have also been loaded from an external file, then the entry would just be: externalDataNodePath="/airfoil". This is used primarily for loop-detection.</listItem>
+    /// </list>
+    /// <para>
+    /// The single tree for the example above would look like:</para>
+    /// <code language="XML" title=" ">
+    /// &lt;?xml version="1.0" encoding="utf-8"?&gt;
+    /// &lt;cpacs xsi:noNamespaceSchemaLocation="cpacs_schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+    /// &lt;vehicles&gt;
+    /// &lt;profiles&gt;
+    /// &lt;wingAirfoils&gt;
+    /// &lt;airfoil uID="NACA0010" externalFileName="NACA0010.xml" externalDataDirectory="file://airfoils" externalDataNodePath="/cpacs/vehicles/profiles/wingAirfoils"&gt;
+    /// &lt;name&gt;NACA 0010 Airfoil&lt;/name&gt;
+    /// &lt;pointList"&gt;...&lt;/pointList"&gt;
+    /// &lt;/airfoil&gt;
+    /// ...
+    /// &lt;airfoil uID="NACA0012"&gt;
+    /// &lt;name&gt;NACA 0012 Airfoil&lt;/name&gt;
+    /// &lt;pointList&gt;...&lt;/pointList&gt;
+    /// &lt;/airfoil&gt;
+    /// &lt;/wingAirfoils&gt;
+    /// &lt;/profiles&gt;
+    /// &lt;/vehicles&gt;
+    /// &lt;cpacs&gt;</code>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// 5. UIDs and references</title>
+    /// <content>
+    /// <para>
+    /// The -dataset often uses references between nodes. Typically, these references define connections between parts that are located somewhere else in the dataset (e.g. a wing is connected to a fuselage, a specific engine from the "engines"-section is used, ...). These connections are made, using UID attributes. This means, that a node, that shall be referenced (e.g. an engine type, an airfoil geometry, a mission definition, ...), gets an additional UID attribute, consisting of a unique (in the scope of the whole  dataset) text, like:<legacyItalic>
+    /// CPACS</legacyItalic>
+    /// The -dataset often uses references between nodes. Typically, these references define connections between parts that are located somewhere else in the dataset (e.g. a wing is connected to a fuselage, a specific engine from the "engines"-section is used, ...). These connections are made, using UID attributes. This means, that a node, that shall be referenced (e.g. an engine type, an airfoil geometry, a mission definition, ...), gets an additional UID attribute, consisting of a unique (in the scope of the whole  dataset) text, like:<legacyItalic>
+    /// CPACS</legacyItalic>
+    /// The -dataset often uses references between nodes. Typically, these references define connections between parts that are located somewhere else in the dataset (e.g. a wing is connected to a fuselage, a specific engine from the "engines"-section is used, ...). These connections are made, using UID attributes. This means, that a node, that shall be referenced (e.g. an engine type, an airfoil geometry, a mission definition, ...), gets an additional UID attribute, consisting of a unique (in the scope of the whole  dataset) text, like:</para>
+    /// <code language="XML" title=" ">
+    /// &lt;fuselage uID="ATTAS fuselage"&gt;...</code>
+    /// <para>
+    /// Such a node with a UID is then typically referred to by a subnode, like:</para>
+    /// <code language="XML" title=" ">
+    /// &lt;wing&gt;
+    /// &lt;name&gt;ATTAS main wing&lt;/name&gt;
+    /// &lt;parentUID isLink="True"&gt;ATTAS fuselage&lt;/parentUID&gt;
+    /// ...</code>
+    /// <para>
+    /// <legacyBold>
+    /// It is absolutely essential to ensure that a UID attribute is unique within the whole dataset, as searching for this name is the only way to resolve the reference!</legacyBold>
+    /// </para>
+    /// <para>
+    /// This is also important for testing. All nodes that refer to an UID like e.g. parentUID carry an additional attribute "isLink". If this attribute is true the dataset can be tested for valid UIDs.</para>
+    /// <para>
+    /// UID can either be named according to their appearance in the hierarchy e.g. uid=""mainWingKinkSection" or by automatically placing identifiers e.g. via processor runtime dates</para>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// 6. Symmetry</title>
+    /// <content>
+    /// <para>
+    /// Sometimes it might be useful to specify a part of the aircraft as symmetric instead of holding all the data twice in nearly identical form in the dataset (e.g. left and right wing are usually identical, except for the sign of the y-coordinate). Hence, some parts offer the option to set a symmetry attribute for them, like:</para>
+    /// <code language="XML" title=" ">
+    /// &lt;wing symmetry="x-z-plane"&gt;...</code>
+    /// <para>
+    /// This attribute explains that the whole part with all its subnodes is symmetric to the given plane. Possible planes are:<list class="bullet">
+    /// <listItem>
+    /// x-y-plane</listItem>
+    /// <listItem>
+    /// x-z-plane</listItem>
+    /// <listItem>
+    /// y-z-plane</listItem>
+    /// </list>
+    /// This attribute explains that the whole part with all its subnodes is symmetric to the given plane. Possible planes are:</para>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <subtitle>
+    /// UIDs, references and symmetry</subtitle>
+    /// <content>
+    /// <para>
+    /// All nodes, e.g. parentUID, in CPACS that refer to a component that holds symmetry attribute, e.g. wing, have to carry the symmetry attribute as well.</para>
+    /// <para>
+    /// The symmetry attribute may take three values: symm, def, full:<list class="bullet">
+    /// <listItem>
+    /// <legacyBold>
+    /// def:</legacyBold>
+    /// The element refers to the geometric component that has a symmetry attribute and refers only to the defined side of the geometric component.</listItem>
+    /// <listItem>
+    /// <legacyBold>
+    /// symm:</legacyBold>
+    /// The element refers to the geometric component that has a symmetry attribute and refers only to the symmetric side of the geometric component. (Similar to the previous _symm solution)</listItem>
+    /// <listItem>
+    /// <legacyBold>
+    /// full:</legacyBold>
+    /// The element refers to the geometric component that has a symmetry attribute and refers to the complete component. (This is the default behaviour)</listItem>
+    /// </list>
+    /// The symmetry attribute may take three values: symm, def, full:</para>
+    /// <code language="XML" title=" ">
+    /// &lt;wing uID="ATTAS main wing" symmetry="x-z-plane"&gt;
+    /// ...
+    /// &lt;segments&gt;
+    /// &lt;segment uID="ATTAS main wing innersegment"&gt;
+    /// ...</code>
+    /// <para>
+    /// In the example above, to refer to the "other" side of the wing on must use the definition as such:</para>
+    /// <code language="XML" title=" ">
+    /// &lt;loadcase&gt;
+    /// ...
+    /// &lt;segments&gt;
+    /// &lt;segment&gt;
+    /// &lt;segmentUID isLink="True" symmetry="symm"&gt;ATTAS main wing inner segment&lt;/segmentUID&gt;
+    /// &lt;strip&gt;...</code>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// 7. Arrays and vectors</title>
+    /// <content>
+    /// <para>
+    /// For bigger datasets (e.g. aerodynamic or engine performance maps), it is better to insert a vector or an array of values instead of providing a single node for each data value. In , there are  and  for this purpose.<legacyItalic>
+    /// CPACS</legacyItalic>
+    /// For bigger datasets (e.g. aerodynamic or engine performance maps), it is better to insert a vector or an array of values instead of providing a single node for each data value. In , there are  and  for this purpose.<legacyBold>
+    /// vectors</legacyBold>
+    /// For bigger datasets (e.g. aerodynamic or engine performance maps), it is better to insert a vector or an array of values instead of providing a single node for each data value. In , there are  and  for this purpose.<legacyBold>
+    /// arrays</legacyBold>
+    /// For bigger datasets (e.g. aerodynamic or engine performance maps), it is better to insert a vector or an array of values instead of providing a single node for each data value. In , there are  and  for this purpose.</para>
+    /// <para>
+    /// The  attribute specifies the type of data. It can have the following value:<legacyBold>
+    /// mapType</legacyBold>
+    /// The  attribute specifies the type of data. It can have the following value:<list class="bullet">
+    /// <listItem>
+    /// mapType="vector"<para>
+    /// The vector is meant as a one-dimensional-array. In such a node, the values are contained in a semicolon separated list:</para>
+    /// mapType="vector"<code language="XML" title=" ">
+    /// &lt;angleOfAttack mapType="vector"&gt;0.;1.5;3.;4.5;6;7.5;9.&lt;/angleOfAttack&gt;</code>
+    /// mapType="vector"</listItem>
+    /// <listItem>
+    /// mapType="array"<para>
+    /// The array is meant for multi-dimensional-arrays. Again, the values are contained in a semicolon separated list. An array is always preceded by a sequence of vectors, containing the dimensions and index values of it:</para>
+    /// mapType="array"<code language="XML" title=" ">
+    /// &lt;machNumber mapType="vector"&gt;0.5&lt;/machNumber&gt;
+    /// &lt;altitude mapType="vector"&gt;1000.;2000.&lt;/altitude&gt;
+    /// &lt;angleOfSideslip mapType="vector"&gt;-5.;0.;5.&lt;/angleOfSideslip&gt;
+    /// &lt;angleOfAttack mapType="vector"&gt;1.;2.;3.;4.&lt;/angleOfAttack&gt;
+    /// &lt;cfx mapType="array"&gt;1.;2.;3.;4.;11.;12.;13.;14.;21.;22.;23.;24.;101.;102.;103.;104.;111.;112.;113.;114.;121.;122.;123.;124.&lt;/cfx&gt;</code>
+    /// mapType="array"<para>
+    /// In this example, the values for "cfx" are given in a way to indicate the array order: The last parameter is always varied first, then the pre-last, and then further. The array above is also shown in the following tables:</para>
+    /// mapType="array"<table>
+    /// <title>
+    /// <legacyBold>
+    /// Value for cfx, Mach number: 0.5, Altitude: 1000m</legacyBold>
+    /// </title>
+    /// <row>
+    /// <entry>
+    /// </entry>
+    /// <entry>
+    /// Angle of attack = 1.°</entry>
+    /// <entry>
+    /// Angle of attack = 2.°</entry>
+    /// <entry>
+    /// Angle of attack = 3.°</entry>
+    /// <entry>
+    /// Angle of attack = 4.°</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// Angle of Sideslip = -5.°</entry>
+    /// <entry>
+    /// 1.</entry>
+    /// <entry>
+    /// 2.</entry>
+    /// <entry>
+    /// 3.</entry>
+    /// <entry>
+    /// 4.</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// Angle of Sideslip = 0.°</entry>
+    /// <entry>
+    /// 11.</entry>
+    /// <entry>
+    /// 12.</entry>
+    /// <entry>
+    /// 13.</entry>
+    /// <entry>
+    /// 14.</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// Angle of Sideslip = 5.°</entry>
+    /// <entry>
+    /// 21.</entry>
+    /// <entry>
+    /// 22.</entry>
+    /// <entry>
+    /// 23.</entry>
+    /// <entry>
+    /// 24.</entry>
+    /// </row>
+    /// </table>
+    /// mapType="array"<table>
+    /// <title>
+    /// <legacyBold>
+    /// Value for cfx, Mach number: 0.5, Altitude: 2000m</legacyBold>
+    /// </title>
+    /// <row>
+    /// <entry>
+    /// </entry>
+    /// <entry>
+    /// Angle of attack = 1.°</entry>
+    /// <entry>
+    /// Angle of attack = 2.°</entry>
+    /// <entry>
+    /// Angle of attack = 3.°</entry>
+    /// <entry>
+    /// Angle of attack = 4.°</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// Angle of Sideslip = -5.°</entry>
+    /// <entry>
+    /// 101.</entry>
+    /// <entry>
+    /// 102.</entry>
+    /// <entry>
+    /// 103.</entry>
+    /// <entry>
+    /// 104.</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// Angle of Sideslip = 0.°</entry>
+    /// <entry>
+    /// 111.</entry>
+    /// <entry>
+    /// 112.</entry>
+    /// <entry>
+    /// 113.</entry>
+    /// <entry>
+    /// 114.</entry>
+    /// </row>
+    /// <row>
+    /// <entry>
+    /// Angle of Sideslip = 5.°</entry>
+    /// <entry>
+    /// 121.</entry>
+    /// <entry>
+    /// 122.</entry>
+    /// <entry>
+    /// 123.</entry>
+    /// <entry>
+    /// 124.</entry>
+    /// </row>
+    /// </table>
+    /// mapType="array"</listItem>
+    /// </list>
+    /// The  attribute specifies the type of data. It can have the following value:</para>
+    /// <para>
+    /// </para>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// 8. Atmosphere</title>
+    /// <content>
+    /// <para>
+    /// At some places in CPACS, an atmosphere has to be selected (e.g. for connecting an altitude with a certain pressure or density).
+    /// Currently, CPACS does only support a single atmospheric model: The ICAO Standard Atmosphere (ISA) from 1993 (see ICAO Doc 7488/3 'MANUAL OF THE ICAO STANDARD ATMOSPHERE', third edition, 1993)
+    /// It covers temperature, pressure, density, speed of sound, dynamic viscosity and kinematic viscosity with respect to altitude.
+    /// In CPACS, 'altitude' means what is called 'geopotential altitude' (H) in the ISA reference document and is given in [m].
+    /// For details, see ISA manual, section 2.3, page E-viii f.
+    /// ISA covers a range from -5000 m to 80000 m.</para>
+    /// <para>
+    /// Temperature offsets are introduced on top of the definitions in the ISA manual (which does not cover such variations). The offset model
+    /// is based upon the idea that the pressure at a fixed geopotential altitude is independent from temperature offset (pressure altitude).
+    /// The temperature offset changes only the density (following rho = p / Gas Constant / T) (and viscosity, of course)</para>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 2.3.1</title>
+    /// <content>
+    /// <para>
+    /// Release in Jul 2016</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// CPACS 2.3.1 is a beta release, all parameters may be subject to change.</listItem>
+    /// <listItem>
+    /// Added a branch for the definition of design studies.</listItem>
+    /// <listItem>
+    /// Added thermal properties for materials.</listItem>
+    /// <listItem>
+    /// Revised the definition of flights/flightplans.</listItem>
+    /// <listItem>
+    /// Added an airline definition.</listItem>
+    /// <listItem>
+    /// Added structure for skid gear components.</listItem>
+    /// <listItem>
+    /// Changed the units for material density to SI units.</listItem>
+    /// <listItem>
+    /// Revised the top level fleets node and put it into the new airline node.</listItem>
+    /// <listItem>
+    /// All issues for this release can be found online</listItem>
+    /// <listItem>
+    /// https://github.com/DLR-LY/CPACS/issues</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 2.3</title>
+    /// <content>
+    /// <para>
+    /// Release in Nov 2015</para>
+    /// <para>
+    /// CPACS 2.3 is the fourth public release of CPACS. Major changes include:</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// Included vector notation for weight and balance.</listItem>
+    /// <listItem>
+    /// Included flight system and flight dynamic information.</listItem>
+    /// <listItem>
+    /// Included top level aircraft requirements.</listItem>
+    /// <listItem>
+    /// Included a prototype for detailed nacelle geometries.</listItem>
+    /// <listItem>
+    /// Included structural mounts.</listItem>
+    /// <listItem>
+    /// Extended aero data set for loads.</listItem>
+    /// <listItem>
+    /// Extended the mass breakdown.</listItem>
+    /// <listItem>
+    /// Updated the symmetry definition, please take a look at the documentation point 5 and 6.</listItem>
+    /// <listItem>
+    /// All issues for this release can be found online</listItem>
+    /// <listItem>
+    /// https://github.com/DLR-LY/CPACS/issues</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 2.2.1</title>
+    /// <content>
+    /// <para>
+    /// Release in Feb 2015</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// CPACS 2.2.1 is a beta release, all parameters may be subject to change.</listItem>
+    /// <listItem>
+    /// Included preliminary definition of guidecurves.</listItem>
+    /// <listItem>
+    /// Included additional means to describe the wing structure.</listItem>
+    /// <listItem>
+    /// Included preliminary fuselage fuel tanks.</listItem>
+    /// <listItem>
+    /// Included preliminary load envelope.</listItem>
+    /// <listItem>
+    /// Included preliminary flight performance and flight qualities. (flight dynamics will follow)</listItem>
+    /// <listItem>
+    /// Updated toolspecifics</listItem>
+    /// <listItem>
+    /// Updated uncertainty definition</listItem>
+    /// <listItem>
+    /// all issues can be found online</listItem>
+    /// <listItem>
+    /// http://code.google.com/p/cpacs/issues/list</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 2.2</title>
+    /// <content>
+    /// <para>
+    /// Release in May 2014</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// CPACS 2.2 is the third public release of CPACS. Major changes include</listItem>
+    /// <listItem>
+    /// Additions and changes to the loadCaseType.</listItem>
+    /// <listItem>
+    /// Included additional genericGeometricEntities for bellyfairings etc.</listItem>
+    /// <listItem>
+    /// The mass breakdown is extended for a more detailed fuselage strucuture.</listItem>
+    /// <listItem>
+    /// Steadiness information on the geometry is excluded from CPACS 2.2. CPACS 2.3 will include optional guidelines for smoother surfaces.</listItem>
+    /// <listItem>
+    /// Uncertainties can now be specified (CPACS 2.2alpha doubleBaseType, CPACS 2.2 also in vector notations)</listItem>
+    /// <listItem>
+    /// all issues can be found online</listItem>
+    /// <listItem>
+    /// http://code.google.com/p/cpacs/issues/list</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 2.1</title>
+    /// <content>
+    /// <para>
+    /// Release in May 2013</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// CPACS 2.1 is the second public release of CPACS. Most of the implementation was already included in CPACS 2.01</listItem>
+    /// <listItem>
+    /// included fuselage structure and cabin definition</listItem>
+    /// <listItem>
+    /// all data is defined according to the CPACS coordinate system. That is the initial coordinate system in which geometries are defined. Therefore, it can but must not meet your body axis.</listItem>
+    /// <listItem>
+    /// the mass breakdown is extended for a more detailed wing strucuture</listItem>
+    /// <listItem>
+    /// profiles can now be included based on a two-dimensional class shape transformation. The old parametrization will still be available. TIGL will learn CST asap.</listItem>
+    /// <listItem>
+    /// all issues can be found online</listItem>
+    /// <listItem>
+    /// http://code.google.com/p/cpacs/issues/list</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 2.01</title>
+    /// <content>
+    /// <para>
+    /// Release in Nov 2012</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// CPACS 2.01 is an internal release for the VAMP project. It is the testbed for CPACS 2.1</listItem>
+    /// <listItem>
+    /// included fuselage structure</listItem>
+    /// <listItem>
+    /// additions to the load case definition</listItem>
+    /// <listItem>
+    /// all issues can be found online</listItem>
+    /// <listItem>
+    /// http://code.google.com/p/cpacs/issues/list</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 2.0</title>
+    /// <content>
+    /// <para>
+    /// Release in Mar 2012</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// CPACS 2.0 is the first public release</listItem>
+    /// <listItem>
+    /// large impacts on the documentation</listItem>
+    /// <listItem>
+    /// all issues can be found online</listItem>
+    /// <listItem>
+    /// http://code.google.com/p/cpacs/issues/list</listItem>
+    /// <listItem>
+    /// compatible with TIGL 2.0</listItem>
+    /// <listItem>
+    /// excluded fuselage structure, reintegration in CPACS 2.1</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 1.6</title>
+    /// <content>
+    /// <para>
+    /// Release in Jul 2011</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// Thanks for the input on the documentation to Felix Dorbath, Till Pfeiffer, Alexander Koch, Falk Heinecke and Tom Otten</listItem>
+    /// <listItem>
+    /// preliminary added enginePylons</listItem>
+    /// <listItem>
+    /// deleted seatAssemblyPositionType</listItem>
+    /// <listItem>
+    /// updated toolspecific blocks from handbook aero and cpacs mass updater</listItem>
+    /// <listItem>
+    /// added weight and balance definition</listItem>
+    /// <listItem>
+    /// added loads reference axis and dynamic aircraft model</listItem>
+    /// <listItem>
+    /// added wing documentation</listItem>
+    /// <listItem>
+    /// added weights documentation</listItem>
+    /// <listItem>
+    /// added fleet documentation</listItem>
+    /// <listItem>
+    /// added paramam toolspecific documentation</listItem>
+    /// <listItem>
+    /// added wing tank definition</listItem>
+    /// <listItem>
+    /// changed some names in the massBreakdown</listItem>
+    /// <listItem>
+    /// deleted old loadCaseDefinitions</listItem>
+    /// <listItem>
+    /// no more plural element for loadAnalyses</listItem>
+    /// <listItem>
+    /// shifted groundforces to groundloadcases, this will need an update</listItem>
+    /// <listItem>
+    /// added noseLandingGear</listItem>
+    /// <listItem>
+    /// mainLandingGear can now have plural SideStruts</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 1.5</title>
+    /// <content>
+    /// <para>
+    /// Release in Feb 2011</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// uID for transformation</listItem>
+    /// <listItem>
+    /// extended stringUIDBaseType with optional attribute isLink</listItem>
+    /// <listItem>
+    /// all elements xxxUID are now of Type stringUIDBaseType</listItem>
+    /// <listItem>
+    /// added new material definition from FA to distinguish between diffent material types</listItem>
+    /// <listItem>
+    /// changed fuselage structure definition due to input from BK</listItem>
+    /// <listItem>
+    /// changed rib definition in cells in component segments</listItem>
+    /// <listItem>
+    /// cleaned up material definition in component segments</listItem>
+    /// <listItem>
+    /// added cpacsVersion information to the header and updates types</listItem>
+    /// <listItem>
+    /// added area and length to the loadCase reference on wing strips</listItem>
+    /// <listItem>
+    /// added wingFuselageAttachment</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 1.4</title>
+    /// <content>
+    /// <para>
+    /// Release in Nov 2010</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// Geometry definition for engine and nacelle added</listItem>
+    /// <listItem>
+    /// Trailing Edge Devices, Leading Edge Devices and Spoilers added</listItem>
+    /// <listItem>
+    /// Rotorcraft added, similar to aircraft</listItem>
+    /// <listItem>
+    /// Splitted up multiple Point Types</listItem>
+    /// <listItem>
+    /// sparCell added uID</listItem>
+    /// <listItem>
+    /// new inline Documentation introduced in CPACS type</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 1.3</title>
+    /// <content>
+    /// <para>
+    /// Release in Aug 2010</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// Fuel definition added</listItem>
+    /// <listItem>
+    /// Introduced component segments for the wing structure</listItem>
+    /// <listItem>
+    /// Mission definition was updated</listItem>
+    /// <listItem>
+    /// VSAero toolspecific data updated</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 1.2</title>
+    /// <content>
+    /// <para>
+    /// Release in May 2010</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// Fuselage Structure Elements are updated following the input from BK</listItem>
+    /// <list class="bullet">
+    /// <listItem>
+    /// stringers&gt;arbitrary additional parameters: yBezugAtStartX, zBezugAtStartX, yBezugAtEndX, zBezugAtEndX</listItem>
+    /// <listItem>
+    /// paxCrossBeams additional parameters: startX, endX</listItem>
+    /// <listItem>
+    /// cargoCrossBeams additional parameters: startX, endX</listItem>
+    /// <listItem>
+    /// paxCrossBeamStruts additional parameters: startX, endX</listItem>
+    /// <listItem>
+    /// cargoCrossBeamStruts additional parameters: startX, endX</listItem>
+    /// <listItem>
+    /// structure&gt;pressureBulkhead: positionX instead of positionZ</listItem>
+    /// <listItem>
+    /// reinforcementNumberVertical: number of vertical reinforcements</listItem>
+    /// <listItem>
+    /// reinforcementNumberHorizontal: number of horizontal reinforcements</listItem>
+    /// <listItem>
+    /// maxFlectionDepth: max camber of pressure bulkhead</listItem>
+    /// <listItem>
+    /// reinforcementNumber: number of reinforcements rear pressure bulkhead</listItem>
+    /// <listItem>
+    /// sheetProperties: definition of sheet properties</listItem>
+    /// <listItem>
+    /// innerRadius: inner radius of the pressure bulkhead</listItem>
+    /// </list>
+    /// <listItem>
+    /// Dummy Wingbox element is included. This definition needs further enhancements</listItem>
+    /// <list class="bullet">
+    /// <listItem>
+    /// cpacs&gt;vehicles&gt;aircraft&gt;model&gt;fuselage&gt;fuselage&gt;structure</listItem>
+    /// <listItem>
+    /// Wingbox:</listItem>
+    /// <listItem>
+    /// xStart: start of the wingbox area</listItem>
+    /// <listItem>
+    /// xEnd: end of the wingbox area</listItem>
+    /// <listItem>
+    /// zStart: upper limit of the wingbox area</listItem>
+    /// </list>
+    /// <listItem>
+    /// Damping Derivaties are added in the form of dcfxdp, dcfxdq, dcfxdr, dcfydp, etc. The data will be stored in the model/global/aeroperformaneMap under a new dampingDerivatives element. Unit is deg/sec.</listItem>
+    /// <listItem>
+    /// StructureProfiles are defined in the profiles element. They are referenced in structuralElements for several entities such as stringer, frame etc. Currently they are referenced via 'structuralProfileUID' for name consistency it should be either only 'structure' or only 'structural'</listItem>
+    /// <listItem>
+    /// Control Commmands. The chain between pilot inputs and controlsurface deflections is now closed.</listItem>
+    /// <list class="bullet">
+    /// <listItem>
+    /// Parameters located at cpacs\vehicles\aircraft\model\systems</listItem>
+    /// <listItem>
+    /// cockpitControl: links from pilotInput to commandCase</listItem>
+    /// <listItem>
+    /// commandCase: links from commandCase to controlDistributor or controlFunction</listItem>
+    /// <listItem>
+    /// controlDistributor links to the controlSurface</listItem>
+    /// <listItem>
+    /// controlLaws includes controlModes automatic and manual</listItem>
+    /// <listItem>
+    /// controlModes contain controlFunctions</listItem>
+    /// </list>
+    /// <listItem>
+    /// TraFuMo toolspecific data added</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// <section>
+    /// <title>
+    /// CPACS 1.1</title>
+    /// <content>
+    /// <para>
+    /// Release in Feb 2010</para>
+    /// <list class="bullet">
+    /// <listItem>
+    /// Fleets model added. The fleets modeling from CATS is introduced to CPACS 1.1</listItem>
+    /// <listItem>
+    /// Reference changed. The reference type in wingSegmentStripCoefficientsType was changed from referenceType to pointType</listItem>
+    /// </list>
+    /// </content>
+    /// </section>
+    /// </content>
+    /// </remarks>
     class CPACSCpacs
     {
     public:
@@ -66,7 +1019,9 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         CPACSHeader                        m_header;
+
         boost::optional<CPACSVehicles>     m_vehicles;
+
         boost::optional<CPACSToolspecific> m_toolspecific;
 
     private:

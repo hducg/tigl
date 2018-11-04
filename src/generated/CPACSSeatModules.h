@@ -35,6 +35,14 @@ namespace generated
     // CPACSStructuralElements
 
     // generated from /xsd:schema/xsd:complexType[791]
+    /// <summary>
+    /// <para>
+    /// seatModulesType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// SeatModules type, containing seat modules</para>
+    /// </remarks>
     class CPACSSeatModules
     {
     public:

@@ -37,6 +37,16 @@ namespace generated
     // CPACSWingSegment
 
     // generated from /xsd:schema/xsd:complexType[436]
+    /// <summary>
+    /// <para>
+    /// Guide Curves Type</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Guide Curve type. This type is used to describe guide
+    /// curves that enable designers to create a geometry that deviates
+    /// from a standard loft.</para>
+    /// </remarks>
     class CPACSGuideCurves
     {
     public:

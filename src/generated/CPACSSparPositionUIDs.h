@@ -30,6 +30,34 @@ namespace generated
     // CPACSSparSegment
 
     // generated from /xsd:schema/xsd:complexType[814]
+    /// <summary>
+    /// <para>
+    /// sparPositionUIDs of the spar.</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// sparPositionType, a sparPostion defines a location
+    /// within the componentSegment where a spar in mounted. Those
+    /// positions are combined to spars by using a list of spar position
+    /// uIDs. The order of the sparPositionUIDs must be the same as the
+    /// order of the points on the real spar (from root to tip or from
+    /// tip to root).</para>
+    /// <para>
+    /// Pleas note: orientation of a spar must be allways
+    /// outbound or allways inbound. A zigzag spar orientation where
+    /// e.g. the spar starts at the root, goes to the tip and goes back
+    /// to another point at the root is not allowed.</para>
+    /// <para>
+    /// Pleas find below a picture for an example definition
+    /// of 3 spars in one wing, by using spar position points and spar
+    /// segments:</para>
+    /// <mediaLink>
+    /// <image href="spars1">
+    /// </image>
+    /// </mediaLink>
+    /// </content>
+    /// </remarks>
     class CPACSSparPositionUIDs
     {
     public:
@@ -43,6 +71,7 @@ namespace generated
         TIGL_EXPORT virtual std::vector<std::string>& GetSparPositionUIDs();
 
     protected:
+        /// List of spar position uIDs.
         std::vector<std::string> m_sparPositionUIDs;
 
     private:

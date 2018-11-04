@@ -33,6 +33,15 @@ namespace generated
     // CPACSHeader
 
     // generated from /xsd:schema/xsd:complexType[892]
+    /// <summary>
+    /// <para>
+    /// updatesType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Updates type, containing update data for the CPACS
+    /// dataset</para>
+    /// </remarks>
     class CPACSUpdates
     {
     public:

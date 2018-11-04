@@ -42,6 +42,15 @@ namespace generated
     // CPACSTrailingEdgeDevice
 
     // generated from /xsd:schema/xsd:complexType[928]
+    /// <summary>
+    /// <para>
+    /// Structure of the wing</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// wingComponentSegmentStructure type, containing the
+    /// whole structue (skins, ribs, spars...) of the wing.</para>
+    /// </remarks>
     class CPACSWingComponentSegmentStructure
     {
     public:
@@ -111,8 +120,11 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         CCPACSWingShell                            m_upperShell;
+
         CCPACSWingShell                            m_lowerShell;
+
         boost::optional<CCPACSWingRibsDefinitions> m_ribsDefinitions;
+
         boost::optional<CCPACSWingSpars>           m_spars;
 
     private:

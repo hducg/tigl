@@ -35,6 +35,15 @@ namespace generated
     // CPACSLongFloorBeamsAssembly
 
     // generated from /xsd:schema/xsd:complexType[517]
+    /// <summary>
+    /// <para>
+    /// longFloorBeamType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// longFloorBeam type, containing a long. floor beam
+    /// definition</para>
+    /// </remarks>
     class CPACSLongFloorBeam
     {
     public:
@@ -67,6 +76,7 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                                           m_uID;
+
         std::vector<unique_ptr<CCPACSLongFloorBeamPosition> > m_longFloorBeamPositions;
 
     private:

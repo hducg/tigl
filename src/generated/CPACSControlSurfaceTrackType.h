@@ -41,6 +41,53 @@ namespace generated
     // CPACSControlSurfaceTracks
 
     // generated from /xsd:schema/xsd:complexType[189]
+    /// <summary>
+    /// <para>
+    /// Control surface tracks (mechnaical link between control
+    /// surface and parent).</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// A track in general describes the structural link
+    /// between the control suface and the parent. Tracks are e.g. the
+    /// flap tracks, the revolute joints, where the aileron or spoiler
+    /// is attached, or the kinematics, attaching slats to the wing.</para>
+    /// <para>
+    /// The spanwise position of the track is defined by
+    /// 'eta', which refers to the control surface dimensions.</para>
+    /// <para>
+    /// The structural properties of the track (e.g.
+    /// materials) are defined in 'trackStructure'.</para>
+    /// <para>
+    /// If an actuator is included into the the track, a
+    /// reference is given in 'actuator'.</para>
+    /// <para>
+    /// The principal kinematic of the track is defined by
+    /// setting the 'trackType' and 'trackSubType'. Please refer to the
+    /// tables below for setting the 'trackType' and 'trackSubType'
+    /// parameter. Note, those tables are not final - they are extended
+    /// continuously.</para>
+    /// <para>
+    /// For trailing edge devices (TED), the 'trackType' and
+    /// 'trackSubType' parameter are defined as follows:</para>
+    /// <mediaLink>
+    /// <image href="tracks_ted">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// For spoiler, the 'trackType' and 'trackSubType'
+    /// parameter are defined as follows:</para>
+    /// <mediaLink>
+    /// <image href="tracks_spoiler">
+    /// </image>
+    /// </mediaLink>
+    /// <para>
+    /// For leading edge devices (LED), the 'trackType' and
+    /// 'trackSubType' parameter are defined as follows: Currently no
+    /// definition available.</para>
+    /// </content>
+    /// </remarks>
     class CPACSControlSurfaceTrackType
     {
     public:
@@ -88,10 +135,21 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                                                m_uID;
+
+        /// Relative chordwise position of the track. Eta
+        /// refers to the control surface.
         CPACSEtaIsoLine                                            m_eta;
+
+        /// Type of the track. Please refer to the remarks
+        /// of the controlSrufaceTrackTypeType for details.
         CPACSControlSurfaceTrackType_trackType                     m_trackType;
+
+        /// Type of the track. Please refer to the remarks
+        /// of the controlSrufaceTrackTypeType for details.
         boost::optional<CPACSControlSurfaceTrackType_trackSubType> m_trackSubType;
+
         boost::optional<CPACSTrackActuator>                        m_actuator;
+
         boost::optional<CPACSTrackStructure>                       m_trackStructure;
 
     private:

@@ -33,6 +33,14 @@ namespace generated
     // CPACSRivets
 
     // generated from /xsd:schema/xsd:complexType[761]
+    /// <summary>
+    /// <para>
+    /// rivetType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Rivet type, containing a rivet</para>
+    /// </remarks>
     class CPACSRivet
     {
     public:
@@ -64,9 +72,17 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                  m_uID;
+
+        /// Name of the rivet type
         boost::optional<std::string> m_name;
+
+        /// Description of the rivet type
         boost::optional<std::string> m_description;
+
+        /// Tensile Strength of the rivet type
         double                       m_tensileStrength;
+
+        /// Shear Strength of the rivet type
         double                       m_shearStrength;
 
     private:

@@ -37,6 +37,15 @@ namespace generated
     // CPACSWing
 
     // generated from /xsd:schema/xsd:complexType[726]
+    /// <summary>
+    /// <para>
+    /// Positionings of the wing.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Positionings type, containing all the positionings of
+    /// the wing sections.</para>
+    /// </remarks>
     class CPACSPositionings
     {
     public:

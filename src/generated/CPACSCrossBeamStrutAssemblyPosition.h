@@ -36,6 +36,15 @@ namespace generated
     // CPACSCargoCrossBeamStrutsAssembly
 
     // generated from /xsd:schema/xsd:complexType[233]
+    /// <summary>
+    /// <para>
+    /// crossBeamStrutAssemblyPositionType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// CrossBeamStrutAssemblyPosition type, containing a
+    /// crossBeam strut assembly position</para>
+    /// </remarks>
     class CPACSCrossBeamStrutAssemblyPosition
     {
     public:
@@ -83,11 +92,26 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                              m_uID;
+
+        /// UID of profile based structural element to be
+        /// used as crossbeam strut
         std::string                              m_structuralElementUID;
+
+        /// UID of the frame to which the crossbeam strut
+        /// is attached
         std::string                              m_frameUID;
+
+        /// UID of the crossbeam to which the crossbeam
+        /// strut is attached
         std::string                              m_crossBeamUID;
+
+        /// Referenze y position of the strut at the
+        /// crossbeam intersection
         double                                   m_positionYAtCrossBeam;
+
+        /// angle of the strut in global yz plane
         boost::optional<double>                  m_angleX;
+
         boost::optional<CPACSAlignmentCrossBeam> m_alignment;
 
     private:

@@ -31,6 +31,14 @@ namespace generated
     // CPACSToolspecific
 
     // generated from /xsd:schema/xsd:complexType[98]
+    /// <summary>
+    /// <para>
+    /// cFDToolType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// </para>
+    /// </remarks>
     class CPACSCFDTool
     {
     public:
@@ -51,7 +59,9 @@ namespace generated
 
     protected:
         CPACSTool      m_tool;
+
         std::string    m_aircraftModelUID;
+
         CCPACSFarField m_farField;
 
     private:

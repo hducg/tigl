@@ -34,6 +34,14 @@ namespace generated
     // CPACSStructuralElements
 
     // generated from /xsd:schema/xsd:complexType[731]
+    /// <summary>
+    /// <para>
+    /// pressureBulkheadsType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// PressureBulkheads type, conteining pressure bulkheads</para>
+    /// </remarks>
     class CPACSPressureBulkheads
     {
     public:

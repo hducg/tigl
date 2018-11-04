@@ -35,6 +35,15 @@ namespace generated
     // CPACSStructuralElements
 
     // generated from /xsd:schema/xsd:complexType[797]
+    /// <summary>
+    /// <para>
+    /// sheetBasedStrcuturalElementsType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// sheetBasedStrcuturalElementsType, containing sheet
+    /// based structural element definitions</para>
+    /// </remarks>
     class CPACSSheetBasedStructuralElements
     {
     public:

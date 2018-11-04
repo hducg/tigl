@@ -35,6 +35,36 @@ namespace generated
     // CPACSWingElements
 
     // generated from /xsd:schema/xsd:complexType[929]
+    /// <summary>
+    /// <para>
+    /// Element of the section.</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// Within elements the airfoils of the wing are defined.
+    /// Each section can have one or more elements. Within each element
+    /// one airfoil have to be defined. If e.g. the wing should have a
+    /// step at this section, two elements can be defined for the two
+    /// airfoils.</para>
+    /// <para>
+    /// Mathematically spoken a element is a coordinate system
+    /// that is translated, rotated and scaled relative to the section
+    /// coordinate system. This transformation parameters are defined
+    /// withing the transformation section. The wirfoil, which is linked
+    /// by using the parameter airfoilUID is directly 'copied' in the
+    /// element coordinate system. If e.g. the airfoil is defined from 0
+    /// to 1 in x-direction and the total scaling of the elements x-axis
+    /// equals 3.5 the wing chord is 3.5 m long.</para>
+    /// <para>
+    /// An example for wing element can be found in the
+    /// picture below:</para>
+    /// <mediaLink>
+    /// <image href="wingelements">
+    /// </image>
+    /// </mediaLink>
+    /// </content>
+    /// </remarks>
     class CPACSWingElement
     {
     public:
@@ -73,9 +103,16 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                  m_uID;
+
+        /// Name of the wing element.
         std::string                  m_name;
+
+        /// Description of the wing element.
         boost::optional<std::string> m_description;
+
+        /// Reference to a wing airfoil.
         std::string                  m_airfoilUID;
+
         CCPACSTransformation         m_transformation;
 
     private:

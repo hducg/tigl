@@ -35,6 +35,14 @@ namespace generated
     // CPACSControlSurfaces
 
     // generated from /xsd:schema/xsd:complexType[876]
+    /// <summary>
+    /// <para>
+    /// Definition of the wings trailing edge devices.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Definition of the wings trailing edge devices.</para>
+    /// </remarks>
     class CPACSTrailingEdgeDevices
     {
     public:

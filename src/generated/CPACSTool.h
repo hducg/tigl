@@ -29,6 +29,15 @@ namespace generated
     // CPACSCFDTool
 
     // generated from /xsd:schema/xsd:complexType[860]
+    /// <summary>
+    /// <para>
+    /// Tool identification</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Tool identification, containing name and version of a
+    /// tool</para>
+    /// </remarks>
     class CPACSTool
     {
     public:
@@ -45,7 +54,10 @@ namespace generated
         TIGL_EXPORT virtual void SetVersion(const std::string& value);
 
     protected:
+        /// Name of the tool
         std::string m_name;
+
+        /// Version of the tool
         std::string m_version;
 
     private:

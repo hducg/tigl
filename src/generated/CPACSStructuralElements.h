@@ -42,6 +42,15 @@ namespace generated
     // CPACSVehicles
 
     // generated from /xsd:schema/xsd:complexType[841]
+    /// <summary>
+    /// <para>
+    /// structuralElementsType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// structuralElements Type, containing the different structural
+    /// elements</para>
+    /// </remarks>
     class CPACSStructuralElements
     {
     public:
@@ -106,12 +115,19 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         boost::optional<CPACSSheetBasedStructuralElements>   m_sheetBasedStructuralElements;
+
         boost::optional<CPACSProfileBasedStructuralElements> m_profileBasedStructuralElements;
+
         boost::optional<CCPACSPressureBulkheads>             m_pressureBulkheads;
+
         boost::optional<CPACSWindows>                        m_windows;
+
         boost::optional<CCPACSDoors>                         m_doors;
+
         boost::optional<CPACSDoorSurroundStructuresAssembly> m_doorSurroundStructures;
+
         boost::optional<CPACSSeatModules>                    m_seatModules;
+
         boost::optional<CPACSRivets>                         m_rivets;
 
     private:

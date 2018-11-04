@@ -39,6 +39,15 @@ namespace generated
     // CPACSRotorcraftModel
 
     // generated from /xsd:schema/xsd:complexType[970]
+    /// <summary>
+    /// <para>
+    /// wingsType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Wings type, containing all the lifting surfaces (wings,
+    /// HTPs, VTPs, canards...) of an aircraft model.</para>
+    /// </remarks>
     class CPACSWings
     {
     public:

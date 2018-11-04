@@ -33,6 +33,25 @@ namespace generated
     // CPACSSparCrossSection
 
     // generated from /xsd:schema/xsd:complexType[909]
+    /// <summary>
+    /// <para>
+    /// webType</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// SparWeb type, containing the cross section area of the
+    /// spar web and the material properties.</para>
+    /// <para>
+    /// Pleas find below a picture where all spar cross
+    /// section parameters as well as the orientation refereneces for
+    /// the material definition can be found:</para>
+    /// <mediaLink>
+    /// <image href="spars2">
+    /// </image>
+    /// </mediaLink>
+    /// </content>
+    /// </remarks>
     class CPACSWeb
     {
     public:
@@ -49,7 +68,11 @@ namespace generated
         TIGL_EXPORT virtual void SetRelPos(const double& value);
 
     protected:
+        /// Material definition of the spar web.
         CCPACSMaterialDefinition m_material;
+
+        /// relPos ranges from 0 to 1 It defines the
+        /// position of the web relative to the caps (see picture below)..
         double                   m_relPos;
 
     private:

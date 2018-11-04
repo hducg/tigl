@@ -30,6 +30,30 @@ namespace generated
     // CPACSCutOutProfiles
 
     // generated from /xsd:schema/xsd:complexType[243]
+    /// <summary>
+    /// <para>
+    /// Definition of cut out profiles.</para>
+    /// </summary>
+    /// <remarks>
+    /// <content>
+    /// <para>
+    /// Optional, the exact shape between the upper and lower
+    /// skin cut out can be given by using cutOutProfiles. In general
+    /// cut out profiles are open profiles and not closed profiles as
+    /// e.g. wing airfoils. The placement, scaling and (partly) rotation
+    /// of the cut out profiles is fixed as the beginning and ending
+    /// point of the profile is fixed as can be seen in the two pictures
+    /// below.</para>
+    /// <mediaLink>
+    /// <image href="wingCutOut">
+    /// </image>
+    /// </mediaLink>
+    /// <mediaLink>
+    /// <image href="wingCutOut2">
+    /// </image>
+    /// </mediaLink>
+    /// </content>
+    /// </remarks>
     class CPACSCutOutProfile
     {
     public:
@@ -49,8 +73,21 @@ namespace generated
         TIGL_EXPORT virtual void SetRotZ(const double& value);
 
     protected:
+        /// Reference to the profile uID. Profiles should
+        /// be linked in profiles/structuralProfiles
         std::string     m_profileUID;
+
+        /// Relative spanwise position of the cut out
+        /// profile. The eta coordinate refers to the control surface and
+        /// desribes the cut out profile at the leading edge of the control
+        /// surface.
         CPACSEtaIsoLine m_eta;
+
+        /// Rotation of the airfoil around the control
+        /// surface middle plane normal direciotn. Reference point is the
+        /// most forward point of the airfoil. Defaults to 90°, which is
+        /// equivalent to the airfoilplacement in flight direction (along
+        /// wings-x axis).
         double          m_rotZ;
 
     private:

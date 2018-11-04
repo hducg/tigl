@@ -36,6 +36,15 @@ namespace generated
     // CPACSProfiles
 
     // generated from /xsd:schema/xsd:complexType[845]
+    /// <summary>
+    /// <para>
+    /// Definition cross sections of structural profiles.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Structuralprofiles type, containing cross section
+    /// information of structural profiles.</para>
+    /// </remarks>
     class CPACSStructuralProfiles
     {
     public:
@@ -64,6 +73,7 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::vector<unique_ptr<CPACSStructuralProfile> >   m_structuralProfile2Ds;
+
         std::vector<unique_ptr<CPACSStructuralProfile3D> > m_structuralProfile3Ds;
 
     private:

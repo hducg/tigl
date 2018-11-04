@@ -39,6 +39,16 @@ namespace generated
     // CPACSCpacs
 
     // generated from /xsd:schema/xsd:complexType[906]
+    /// <summary>
+    /// <para>
+    /// vehiclesType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Vehicles node, containing all the vehicle-specific
+    /// data. This includes the vehicles themselves, as well as
+    /// components that are used as parts of the vehicles.</para>
+    /// </remarks>
     class CPACSVehicles
     {
     public:
@@ -85,9 +95,13 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         boost::optional<CPACSAircraft>           m_aircraft;
+
         boost::optional<CPACSRotorcraft>         m_rotorcraft;
+
         boost::optional<CCPACSProfiles>          m_profiles;
+
         boost::optional<CPACSStructuralElements> m_structuralElements;
+
         boost::optional<CPACSMaterials>          m_materials;
 
     private:

@@ -35,6 +35,15 @@ namespace generated
     // CPACSFuselageStructure
 
     // generated from /xsd:schema/xsd:complexType[113]
+    /// <summary>
+    /// <para>
+    /// cargoCrossBeamsAssemblyType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// CargoCrossBeamsAssembly type, containing cargo
+    /// crossBeam assemblys</para>
+    /// </remarks>
     class CPACSCargoCrossBeamsAssembly
     {
     public:

@@ -35,6 +35,15 @@ namespace generated
     // CPACSWingSpar
 
     // generated from /xsd:schema/xsd:complexType[817]
+    /// <summary>
+    /// <para>
+    /// Spar segments of the wing.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// sparSegmentsType, containing multiple sparSegment
+    /// (=spars) of the wing.</para>
+    /// </remarks>
     class CPACSSparSegments
     {
     public:

@@ -33,6 +33,15 @@ namespace generated
     // CPACSDoorSurroundStructuresAssembly
 
     // generated from /xsd:schema/xsd:complexType[286]
+    /// <summary>
+    /// <para>
+    /// doorSurroundStructurePositionType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// DoorSurroundStructurePosition type, containing the position of a
+    /// door surround structure</para>
+    /// </remarks>
     class CPACSDoorSurroundStructurePosition
     {
     public:
@@ -70,11 +79,23 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::string                  m_uID;
+
         boost::optional<std::string> m_name;
+
         boost::optional<std::string> m_description;
+
+        /// number of bays effected by DSS in front of
+        /// door
         int                          m_framesGapFront;
+
+        /// number of bays effected by DSS in behind of
+        /// door
         int                          m_framesGapRear;
+
+        /// number of bays effected by DSS
         int                          m_stringersGapPrimary;
+
+        /// number of bays effected by DSS
         int                          m_stringersGapSecondary;
 
     private:

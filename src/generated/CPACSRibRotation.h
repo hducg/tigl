@@ -34,6 +34,17 @@ namespace generated
     // CPACSWingRibsPositioning
 
     // generated from /xsd:schema/xsd:complexType[758]
+    /// <summary>
+    /// <para>
+    /// Definition of the rotation of the ribs.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// The rotation around z describes the rotation around the
+    /// wings midplane normal axis. The defaults to 90°. The reference
+    /// for the 'zero-angle' of the z-rotation is defined in
+    /// ribRotationReference.</para>
+    /// </remarks>
     class CPACSRibRotation
     {
     public:
@@ -58,6 +69,11 @@ namespace generated
         CCPACSWingRibsPositioning* m_parent;
 
         boost::optional<CPACSRibRotation_ribRotationReference> m_ribRotationReference;
+
+        /// The rotation around z describes the rotation
+        /// around the wings midplane normal axis. The defaults to 90°. The
+        /// reference for the 'zero-angle' of the z-rotation is defined in
+        /// ribRotationReference.
         double                                                 m_z;
 
     private:

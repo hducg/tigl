@@ -29,6 +29,14 @@ namespace generated
     // CPACSCutOutProfiles
 
     // generated from /xsd:schema/xsd:complexType[691]
+    /// <summary>
+    /// <para>
+    /// outerCutOutProfileType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// </para>
+    /// </remarks>
     class CPACSOuterCutOutProfile
     {
     public:
@@ -46,6 +54,7 @@ namespace generated
 
     protected:
         std::string m_profileUID;
+
         double      m_rotZ;
 
     private:

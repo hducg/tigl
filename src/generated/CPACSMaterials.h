@@ -39,6 +39,16 @@ namespace generated
     // CPACSVehicles
 
     // generated from /xsd:schema/xsd:complexType[657]
+    /// <summary>
+    /// <para>
+    /// materialsType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Materials type, containing material and composite data.
+    /// A material describes the properties of a certain material.
+    /// Several materials can be combined within one composite.</para>
+    /// </remarks>
     class CPACSMaterials
     {
     public:
@@ -67,6 +77,7 @@ namespace generated
         CTiglUIDManager* m_uidMgr;
 
         std::vector<unique_ptr<CPACSMaterial> > m_materials;
+
         boost::optional<CPACSComposites>        m_composites;
 
     private:

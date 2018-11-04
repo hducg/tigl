@@ -36,6 +36,15 @@ namespace generated
     // CPACSSkin
 
     // generated from /xsd:schema/xsd:complexType[808]
+    /// <summary>
+    /// <para>
+    /// fuselageSkinSegmentType</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// FuselageSkinSegment type, containing material on skin
+    /// over circumference</para>
+    /// </remarks>
     class CPACSSkinSegments
     {
     public:
